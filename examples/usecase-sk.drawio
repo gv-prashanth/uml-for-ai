@@ -1,0 +1,270 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="kraken-sok-itsi-use-case-simplified" name="Simplified Use Case Diagram">
+    <mxGraphModel dx="2490" dy="1392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3700" pageHeight="3000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="background" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;" value="" vertex="1">
+          <mxGeometry height="2960" width="3660" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=30;fontStyle=1;fontColor=#17202A;" value="Kraken, Splunk Operator and ITSI — Simplified UML Use Case Diagram" vertex="1">
+          <mxGeometry height="46" width="3580" x="60" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#34495E;" value="Two-lane view: external-facing interactions on the left; internal and downstream behavior on the right." vertex="1">
+          <mxGeometry height="32" width="3580" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="kraken-boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F6FAFF;strokeColor=#1E5FA8;strokeWidth=2;align=left;verticalAlign=top;spacingTop=16;spacingLeft=18;spacingRight=10;fontFamily=Helvetica;fontSize=19;fontStyle=1;fontColor=#154360;shadow=0;container=1;collapsible=0;recursiveResize=0;" value="Kraken — STOCK / UNCHANGED" vertex="1">
+          <mxGeometry height="560" width="2200" x="400" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="k-provision" parent="kraken-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E8F1FB;strokeColor=#1E5FA8;strokeWidth=2.3;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#154360;shadow=0;spacing=8;" value="Provision Base Stack" vertex="1">
+          <mxGeometry height="160" width="240" x="1600" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sok-boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;align=left;verticalAlign=top;spacingTop=16;spacingLeft=18;spacingRight=10;fontFamily=Helvetica;fontSize=19;fontStyle=1;fontColor=#0B5345;shadow=0;container=1;collapsible=0;recursiveResize=0;" value="Splunk Operator (SOK) — EXISTING / EXTENDED" vertex="1">
+          <mxGeometry height="600" width="2200" x="400" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="s-reconcile" parent="sok-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E8F6F3;strokeColor=#0B7A75;strokeWidth=2.3;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#0B5345;shadow=0;spacing=8;" value="Reconcile Topology&lt;br&gt;and SSAi Apps" vertex="1">
+          <mxGeometry height="160" width="240" x="1610" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="0xSj8mY1hEwurhFYFV9l-4" parent="sok-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E8F6F3;strokeColor=#0B7A75;strokeWidth=2.3;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#0B5345;shadow=0;spacing=8;" value="Reconcile SSAi Apps" vertex="1">
+          <mxGeometry height="160" width="240" x="1610" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="0xSj8mY1hEwurhFYFV9l-5" edge="1" parent="sok-boundary" source="s-reconcile" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="0xSj8mY1hEwurhFYFV9l-4" value="«include»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1460" y="190" as="sourcePoint" />
+            <mxPoint x="2580" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="itsi-boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;align=left;verticalAlign=top;spacingTop=16;spacingLeft=18;spacingRight=10;fontFamily=Helvetica;fontSize=19;fontStyle=1;fontColor=#873600;shadow=0;container=1;collapsible=0;recursiveResize=0;" value="ITSI APP FRAMEWORK EXTENSION — FINAL MR !2200" vertex="1">
+          <mxGeometry height="950" width="2280" x="400" y="1750" as="geometry" />
+        </mxCell>
+        <mxCell id="i-s1" parent="itsi-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=2.7;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#873600;shadow=0;spacing=8;" value="Install ITSI on&lt;br&gt;Standalone" vertex="1">
+          <mxGeometry height="160" width="240" x="1910" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-standalone" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#873600;" value="[Standalone]" vertex="1">
+          <mxGeometry height="34" width="170" x="1945" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-c3" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#873600;" value="[C3]" vertex="1">
+          <mxGeometry height="34" width="100" x="1280" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="i-register" parent="itsi-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=2.7;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#873600;shadow=0;spacing=8;" value="Reference ITSI&lt;br&gt;Apps &amp;amp; its version" vertex="1">
+          <mxGeometry height="160" width="240" x="250" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i-observe" parent="itsi-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=2.7;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#873600;shadow=0;spacing=8;" value="Monitor ITSI&lt;br&gt;Installation" vertex="1">
+          <mxGeometry height="160" width="240" x="240" y="674" as="geometry" />
+        </mxCell>
+        <mxCell id="i-enable" parent="itsi-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=2.7;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#873600;shadow=0;spacing=8;" value="Enable ITSI" vertex="1">
+          <mxGeometry height="160" width="240" x="250" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="e-dev-create" edge="1" parent="1" source="actor-developer" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="k-create" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-dev-status" edge="1" parent="1" source="actor-developer" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="k-status" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-client-submit" edge="1" parent="1" source="actor-client" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="s-submit" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-client-read" edge="1" parent="1" source="actor-client" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="s-read" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-operator-enable" edge="1" parent="1" source="actor-client" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="i-enable" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="177.5" y="1926.8649648089972" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-operator-observe" edge="1" parent="1" source="actor-client" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="i-observe" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="177.5" y="1946.9171361916683" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-aggregate-register" edge="1" parent="1" source="actor-client" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="i-register" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-platform-provision" edge="1" parent="1" source="k-provision" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="actor-platform" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-platform-reconcile" edge="1" parent="1" source="s-reconcile" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;entryX=0.25;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" target="actor-runtime" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-apprepo-reconcile" edge="1" parent="1" source="0xSj8mY1hEwurhFYFV9l-4" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="actor-apprepo" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-apprepo-inspect" edge="1" parent="1" source="i-inspect" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="actor-apprepo" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-s1-runtime" edge="1" parent="1" source="i-s1" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="actor-standalone" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-c3-runtime" edge="1" parent="1" source="i-c3" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="actor-c3" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-standalone-runtime-generalization" edge="1" parent="1" source="actor-standalone" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;startArrow=none;" target="actor-runtime" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-c3-runtime-generalization" edge="1" parent="1" source="actor-c3" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;startArrow=none;" target="actor-runtime" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-create-provision" edge="1" parent="1" source="k-create" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#1E5FA8;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#154360;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="k-provision" value="«include»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-provision-reconcile" edge="1" parent="1" source="k-provision" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="s-reconcile" value="«include»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-submit-reconcile" edge="1" parent="1" source="s-submit" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="s-reconcile" value="«include»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-enable-reconcile" edge="1" parent="1" source="i-enable" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="s-reconcile" value="«extend»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-enable-inspect" edge="1" parent="1" source="i-enable" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="i-inspect" value="«include»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-inspect-s1" edge="1" parent="1" source="i-s1" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="i-inspect" value="«extend»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-inspect-c3" edge="1" parent="1" source="i-c3" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="i-inspect" value="«extend»">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="external-header" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F7;strokeColor=#7F8C8D;strokeWidth=2;align=center;verticalAlign=middle;spacingTop=8;spacingLeft=10;spacingRight=10;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;shadow=0;" value="EXTERNAL-FACING USE CASES" vertex="1">
+          <mxGeometry height="65" width="520" x="570" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="downstream-header" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F6F3;strokeColor=#0B7A75;strokeWidth=2;align=center;verticalAlign=middle;spacingTop=8;spacingLeft=10;spacingRight=10;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#0B5345;shadow=0;" value="INTERNAL / DOWNSTREAM USE CASES" vertex="1">
+          <mxGeometry height="65" width="900" x="1600" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-developer" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#7F8C8D;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="82.5" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-developer-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Stack Developer&lt;br&gt;/ Tester" vertex="1">
+          <mxGeometry height="62" width="260" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-client" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#7F8C8D;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="82.5" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-client-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Splunk Operator" vertex="1">
+          <mxGeometry height="62" width="260" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-apprepo" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#7F8C8D;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="2810" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-apprepo-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="App Repository (AWS S3)" vertex="1">
+          <mxGeometry height="62" width="340" x="2700" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-platform" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#7F8C8D;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="3070" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-platform-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Kubernetes /&lt;br&gt;vCluster Platform" vertex="1">
+          <mxGeometry height="62" width="340" x="2947.5" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-runtime" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#7F8C8D;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="3205" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-runtime-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Splunk Runtime" vertex="1">
+          <mxGeometry height="62" width="480" x="3017.5" y="1808" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-standalone" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#7F8C8D;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="2890" y="2060" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-standalone-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Standalone&lt;br&gt;Splunk Runtime" vertex="1">
+          <mxGeometry height="62" width="340" x="2770" y="2250" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-c3" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#7F8C8D;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="3545" y="2050" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-c3-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="C3 Runtime&lt;br&gt;CM / IDXC / SHC" vertex="1">
+          <mxGeometry height="62" width="340" x="3427.5" y="2250" as="geometry" />
+        </mxCell>
+        <mxCell id="k-create" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E8F1FB;strokeColor=#1E5FA8;strokeWidth=2.3;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#154360;shadow=0;spacing=8;" value="Create SOK Stack" vertex="1">
+          <mxGeometry height="160" width="240" x="650" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="k-status" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E8F1FB;strokeColor=#1E5FA8;strokeWidth=2.3;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#154360;shadow=0;spacing=8;" value="View Stack Status" vertex="1">
+          <mxGeometry height="160" width="240" x="650" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="s-submit" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E8F6F3;strokeColor=#0B7A75;strokeWidth=2.3;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#0B5345;shadow=0;spacing=8;" value="Submit Desired State" vertex="1">
+          <mxGeometry height="160" width="240" x="650" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="s-read" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E8F6F3;strokeColor=#0B7A75;strokeWidth=2.3;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#0B5345;shadow=0;spacing=8;" value="View Deployment Status" vertex="1">
+          <mxGeometry height="160" width="240" x="650" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="i-inspect" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=2.7;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#873600;shadow=0;spacing=8;" value="Reconcile ITSI" vertex="1">
+          <mxGeometry height="160" width="240" x="2000" y="1870" as="geometry" />
+        </mxCell>
+        <mxCell id="i-c3" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=2.7;fontFamily=Helvetica;fontSize=14;fontStyle=0;fontColor=#873600;shadow=0;spacing=8;" value="Install ITSI on C3" vertex="1">
+          <mxGeometry height="160" width="240" x="1620" y="2420" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-itsi" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#873600;" value="[type = itsi]" vertex="1">
+          <mxGeometry height="34" width="170" x="1535" y="1512" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-role-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;align=center;verticalAlign=middle;spacingTop=8;spacingLeft=10;spacingRight=10;fontFamily=Helvetica;fontSize=11;fontStyle=0;fontColor=#873600;shadow=0;dashed=1;dashPattern=7 5;" value="&lt;b&gt;Role placement&lt;/b&gt;&lt;br&gt;Standalone: all roots, one restart and setup. C3: CM sends SA-IndexCreation to IDXC; SHC excludes the checker; digest and captain migration complete before status 303." vertex="1">
+          <mxGeometry height="60" width="1650" x="950" y="2620" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7F8C8D;strokeWidth=2;align=center;verticalAlign=middle;spacingTop=8;spacingLeft=10;spacingRight=10;fontFamily=Helvetica;fontSize=12;fontStyle=0;fontColor=#34495E;shadow=0;" value="&lt;b&gt;Orientation and notation&lt;/b&gt;&lt;br&gt;The two use-case lanes are separated by alignment and whitespace; no vertical divider is used.&lt;br&gt;Solid = actor association | «include» / «extend» = dashed UML dependency | hollow triangle = actor generalization.&lt;br&gt;Blue = unchanged Kraken | Teal = existing/extended SOK | Orange = new ITSI behavior." vertex="1">
+          <mxGeometry height="120" width="2280" x="400" y="2780" as="geometry" />
+        </mxCell>
+        <mxCell id="0xSj8mY1hEwurhFYFV9l-1" edge="1" parent="1" source="actor-apprepo" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="i-register" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="2440" y="2454" as="sourcePoint" />
+            <mxPoint x="3267" y="1780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xSj8mY1hEwurhFYFV9l-2" edge="1" parent="1" source="actor-runtime" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=block;endFill=0;startArrow=none;entryX=1;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="actor-platform" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="3780" y="1436" as="sourcePoint" />
+            <mxPoint x="3912" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nfj5RXKVhLTh1KOXBQkJ-1" edge="1" parent="1" source="k-provision" style="edgeStyle=none;orthogonalLoop=0;rounded=0;curved=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="actor-apprepo" value="">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="2800" y="460" as="sourcePoint" />
+            <mxPoint x="3630" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

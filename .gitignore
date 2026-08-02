@@ -1,0 +1,35 @@
+*#
+*.built.js
+*.class
+*.pickle
+*.pyc
+*.pyo
+*.spl
+*.tgz
+*~
+.#*
+.*.swn
+.*.swo
+.*.swp
+.DS_Store
+.ant-targets-build.xml
+.claude/
+.idea
+.vscode/
+.pyvenv
+.cache/
+.pytest_cache/
+
+# IDE specifics
+*.iml
+*.code-workspace
+
+# Build cache directories
+.webpack_cache/
+.babel_cache/
+.poetry_status
+.pypi_fingerprints/
+
+# Build temp directory
+tmp/
+.claude

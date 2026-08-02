@@ -1,0 +1,66 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="online-shopping-use-case" name="Use Case Diagram">
+    <mxGraphModel dx="1465" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;" value="" vertex="1">
+          <mxGeometry height="760" width="1120" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=26;fontStyle=1;fontColor=#000000;" value="Online Shopping — UML Use Case Diagram" vertex="1">
+          <mxGeometry height="38" width="760" x="60" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#000000;" value="Sample system scope showing actors, associations, and an «include» dependency" vertex="1">
+          <mxGeometry height="26" width="760" x="60" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=17;fontStyle=1;fontColor=#000000;align=left;verticalAlign=top;spacingTop=12;spacingLeft=16;container=1;collapsible=0;recursiveResize=0;shadow=0;" value="Online Shopping System" vertex="1">
+          <mxGeometry height="550" width="650" x="260" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=16;fontStyle=1;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=2;" value="Customer" vertex="1">
+          <mxGeometry height="190" width="95" x="80" y="301" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=16;fontStyle=1;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=2;" value="Payment Gateway" vertex="1">
+          <mxGeometry height="190" width="95" x="985" y="301" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=16;fontStyle=0;fontColor=#000000;shadow=0;" value="Browse Products" vertex="1">
+          <mxGeometry height="82" width="210" x="385" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=16;fontStyle=0;fontColor=#000000;shadow=0;" value="Place Order" vertex="1">
+          <mxGeometry height="82" width="210" x="385" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="32" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=16;fontStyle=0;fontColor=#000000;shadow=0;" value="Make Payment" vertex="1">
+          <mxGeometry height="82" width="190" x="675" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="33" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=16;fontStyle=0;fontColor=#000000;shadow=0;" value="Track Order" vertex="1">
+          <mxGeometry height="82" width="210" x="385" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="40" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.22;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="30" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="41" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.50;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="42" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;exitX=1;exitY=0.80;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="43" edge="1" parent="1" source="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="44" edge="1" parent="1" source="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 6;endArrow=open;endFill=0;startArrow=none;strokeColor=#000000;strokeWidth=2;fontSize=13;fontStyle=2;fontColor=#000000;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="32" value="«include»">
+          <mxGeometry relative="1" x="0.05" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#000000;" value="Solid line: association" vertex="1">
+          <mxGeometry height="24" width="180" x="60" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="51" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#000000;" value="Dashed open arrow: «include»" vertex="1">
+          <mxGeometry height="24" width="240" x="250" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="52" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#000000;" value="All elements are native draw.io shapes and remain editable." vertex="1">
+          <mxGeometry height="24" width="380" x="700" y="720" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

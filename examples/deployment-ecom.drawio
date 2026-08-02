@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-20T00:00:00.000Z" agent="Codex" version="26.0.0" type="device">
+  <diagram id="online-shopping-deployment" name="Deployment Diagram">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1540" height="1020" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="Online Shopping — UML Deployment Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=26;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="48" width="900" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Production topology showing devices, execution environments, deployed artifacts, and communication paths" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="88" width="1040" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Customer device -->
+        <mxCell id="10" value="" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="220" width="245" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="«device»&lt;br&gt;&lt;b&gt;Customer Device&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="86" y="246" width="185" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Web Browser&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=top;spacingTop=10;fontFamily=Helvetica;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="95" y="315" width="175" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="«artifact»&lt;br&gt;&lt;b&gt;shopping-web-client&lt;/b&gt;" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="113" y="388" width="139" height="58" as="geometry"/>
+        </mxCell>
+
+        <!-- Web server -->
+        <mxCell id="20" value="" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="375" y="220" width="260" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="«device»&lt;br&gt;&lt;b&gt;Web Server&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="405" y="246" width="200" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Nginx&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=top;spacingTop=10;fontFamily=Helvetica;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="410" y="315" width="190" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="«artifact»&lt;br&gt;&lt;b&gt;web-ui.bundle&lt;/b&gt;" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="435" y="388" width="140" height="58" as="geometry"/>
+        </mxCell>
+
+        <!-- Application server -->
+        <mxCell id="30" value="" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="705" y="180" width="350" height="390" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="«device»&lt;br&gt;&lt;b&gt;Application Server&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="740" y="209" width="280" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Java Runtime&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=top;spacingTop=11;fontFamily=Helvetica;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="750" y="290" width="260" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="«artifact»&lt;br&gt;&lt;b&gt;shopping-service.jar&lt;/b&gt;" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="774" y="385" width="104" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="«artifact»&lt;br&gt;&lt;b&gt;order-worker.jar&lt;/b&gt;" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="888" y="385" width="98" height="76" as="geometry"/>
+        </mxCell>
+
+        <!-- Database server -->
+        <mxCell id="40" value="" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="220" width="290" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="«device»&lt;br&gt;&lt;b&gt;Database Server&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="246" width="220" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;PostgreSQL&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=top;spacingTop=10;fontFamily=Helvetica;fontSize=13;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1165" y="315" width="210" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" value="«artifact»&lt;br&gt;&lt;b&gt;shopping_db&lt;/b&gt;" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="388" width="140" height="58" as="geometry"/>
+        </mxCell>
+
+        <!-- External payment provider -->
+        <mxCell id="50" value="" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="745" y="660" width="270" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="51" value="«device»&lt;br&gt;&lt;b&gt;Payment Provider&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="775" y="686" width="210" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Payment API Runtime&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=top;spacingTop=8;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="785" y="755" width="190" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" value="«artifact»&lt;br&gt;&lt;b&gt;gateway-api&lt;/b&gt;" style="shape=note;size=11;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;shadow=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="815" y="811" width="130" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- UML communication paths -->
+        <mxCell id="60" value="HTTPS / TLS" style="edgeStyle=none;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry x="0" y="-12" relative="1" as="geometry">
+            <mxPoint x="305" y="375" as="sourcePoint"/>
+            <mxPoint x="375" y="375" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="61" value="REST / HTTPS" style="edgeStyle=none;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry x="0" y="-12" relative="1" as="geometry">
+            <mxPoint x="635" y="375" as="sourcePoint"/>
+            <mxPoint x="705" y="375" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="62" value="JDBC / TLS" style="edgeStyle=none;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry x="0" y="-12" relative="1" as="geometry">
+            <mxPoint x="1055" y="375" as="sourcePoint"/>
+            <mxPoint x="1125" y="375" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="63" value="Payment API / HTTPS" style="edgeStyle=none;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#000000;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry x="0" y="-14" relative="1" as="geometry">
+            <mxPoint x="880" y="570" as="sourcePoint"/>
+            <mxPoint x="880" y="660" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Notation key -->
+        <mxCell id="70" value="Notation" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="958" width="100" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="71" value="3D box: UML node / device" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="150" y="958" width="210" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="72" value="Folded page: deployed artifact" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="365" y="958" width="225" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="73" value="Solid line: communication path" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="595" y="958" width="220" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="74" value="Nested artifacts are deployed to their enclosing execution environment." style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="960" y="958" width="455" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,215 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="kraken-sok-itsi-deployment-simplified" name="Simplified Deployment Diagram">
+    <mxGraphModel dx="3113" dy="1740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="5200" pageHeight="3050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="background" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;" value="" vertex="1">
+          <mxGeometry height="3010" width="5160" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=30;fontStyle=1;fontColor=#17202A;" value="Kraken, Splunk Operator and ITSI — Simplified UML Deployment Diagram" vertex="1">
+          <mxGeometry height="46" width="5080" x="60" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#34495E;" value="Runtime deployment aligned to the final use cases: provision the base stack, reconcile apps, and install ITSI on Standalone or C3." vertex="1">
+          <mxGeometry height="32" width="5080" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="scope-note" parent="1" style="rounded=1;fillColor=#F4F6F7;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=center;verticalAlign=middle;spacing=10;fontSize=15;dashed=1;dashPattern=7 5;" value="One ITSI-enabled SOK image extends App Framework. Kraken and the base Splunk deployment stay unchanged. Deploy either Standalone or C3." vertex="1">
+          <mxGeometry height="90" width="4050" x="1050" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="workstation" parent="1" style="shape=cube;size=22;direction=south;perimeter=rectanglePerimeter;fillColor=#FFFFFF;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=left;verticalAlign=top;spacingTop=18;spacingLeft=24;fontSize=17;container=1;collapsible=0;recursiveResize=0;" value="«device»&lt;br&gt;&lt;b&gt;Developer Workstation&lt;/b&gt;&lt;br&gt;EXTERNAL" vertex="1">
+          <mxGeometry height="360" width="840" x="60" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="kraken-client" parent="workstation" style="shape=note;size=14;aspect=fixed;fillColor=#F4F6F7;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;Kraken Client&lt;/b&gt;" vertex="1">
+          <mxGeometry height="145" width="250" x="120" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="kubectl-client" parent="workstation" style="shape=note;size=14;aspect=fixed;fillColor=#F4F6F7;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;Kubernetes Client&lt;/b&gt;" vertex="1">
+          <mxGeometry height="145" width="250" x="470" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="kraken-service" parent="1" style="shape=cube;size=22;direction=south;perimeter=rectanglePerimeter;fillColor=#F6FAFF;whiteSpace=wrap;html=1;strokeColor=#1E5FA8;strokeWidth=2;fontFamily=Helvetica;fontColor=#154360;shadow=0;align=left;verticalAlign=top;spacingTop=18;spacingLeft=24;fontSize=17;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;Kraken Service&lt;/b&gt;&lt;br&gt;STOCK / UNCHANGED" vertex="1">
+          <mxGeometry height="360" width="840" x="60" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="stack-provisioner" parent="kraken-service" style="shape=note;size=14;aspect=fixed;fillColor=#E8F1FB;whiteSpace=wrap;html=1;strokeColor=#1E5FA8;strokeWidth=2;fontFamily=Helvetica;fontColor=#154360;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;Stack Provisioner&lt;/b&gt;" vertex="1">
+          <mxGeometry height="145" width="350" x="245" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="app-repository" parent="1" style="shape=cube;size=22;direction=south;perimeter=rectanglePerimeter;fillColor=#FFFFFF;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=left;verticalAlign=top;spacingTop=18;spacingLeft=24;fontSize=17;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;App Repository (S3)&lt;/b&gt;&lt;br&gt;EXTERNAL" vertex="1">
+          <mxGeometry height="360" width="840" x="60" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-aggregate" parent="app-repository" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;ITSI Apps + Version&lt;/b&gt;" vertex="1">
+          <mxGeometry height="165" width="430" x="205" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="platform" parent="1" style="shape=cube;size=22;direction=south;perimeter=rectanglePerimeter;fillColor=#FFFFFF;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=left;verticalAlign=top;spacingTop=18;spacingLeft=24;fontSize=17;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;Kubernetes Platform&lt;/b&gt;&lt;br&gt;STOCK RUNTIME" vertex="1">
+          <mxGeometry height="2320" width="4050" x="1050" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="vcluster" parent="platform" style="rounded=0;fillColor=#FFFFFF;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Kraken vCluster&lt;/b&gt;" vertex="1">
+          <mxGeometry height="2050" width="3810" x="120" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="kube-api" parent="vcluster" style="rounded=0;fillColor=#FFFFFF;whiteSpace=wrap;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontColor=#34495E;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Kubernetes API&lt;/b&gt;" vertex="1">
+          <mxGeometry height="500" width="850" x="120" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="enterprise-crds" parent="kube-api" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;Enterprise v4 CRDs&lt;/b&gt;&lt;br&gt;type: itsi" vertex="1">
+          <mxGeometry height="165" width="250" x="120" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="desired-state" parent="kube-api" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;SOK Desired State&lt;/b&gt;&lt;br&gt;ITSI app references" vertex="1">
+          <mxGeometry height="165" width="250" x="480" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="namespace" parent="vcluster" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Splunk Namespace&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1780" width="2460" x="1150" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="operator" parent="namespace" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Splunk Operator (SOK)&lt;/b&gt;&lt;br&gt;EXISTING / EXTENDED" vertex="1">
+          <mxGeometry height="520" width="720" x="120" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="operator-image" parent="operator" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;ITSI-enabled SOK Image&lt;/b&gt;&lt;br&gt;App Framework + ITSI" vertex="1">
+          <mxGeometry height="190" width="430" x="145" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="standalone" parent="namespace" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Standalone Splunk Runtime&lt;/b&gt;" vertex="1">
+          <mxGeometry height="390" width="1320" x="1020" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="standalone-itsi" parent="standalone" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;ITSI App Suite&lt;/b&gt;&lt;br&gt;installed by App Framework" vertex="1">
+          <mxGeometry height="170" width="600" x="360" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" parent="namespace" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;C3 Runtime&lt;/b&gt;" vertex="1">
+          <mxGeometry height="950" width="1320" x="1020" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-manager" parent="c3" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Cluster Manager (CM)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="300" width="440" x="120" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cm-app" parent="cluster-manager" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;SA-IndexCreation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="200" x="120" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="indexer-cluster" parent="c3" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Indexer Cluster (IDXC)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="300" width="440" x="760" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="idxc-app" parent="indexer-cluster" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;SA-IndexCreation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="200" x="120" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="shc-deployer" parent="c3" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;SHC Deployer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="300" width="440" x="120" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="deployer-apps" parent="shc-deployer" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;ITSI Search Apps&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="200" x="120" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="search-head-cluster" parent="c3" style="rounded=0;fillColor=#F3FBF9;whiteSpace=wrap;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontColor=#0B5345;shadow=0;align=center;verticalAlign=top;spacingTop=12;spacingLeft=10;spacingRight=10;fontSize=15;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Search Head Cluster (SHC)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="300" width="440" x="760" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="shc-apps" parent="search-head-cluster" style="shape=note;size=14;aspect=fixed;fillColor=#FFE1C2;whiteSpace=wrap;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontColor=#873600;shadow=0;align=center;verticalAlign=middle;spacing=8;fontSize=13;" value="«artifact»&lt;br&gt;&lt;b&gt;ITSI Search Apps&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="200" x="120" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="topology-choice" parent="namespace" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#0B5345;" value="DEPLOY ONE TOPOLOGY" vertex="1">
+          <mxGeometry height="42" width="1320" x="1020" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e-workstation-kraken" edge="1" parent="1" source="workstation" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#1E5FA8;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#154360;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="kraken-service" value="Kraken API / HTTPS">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-workstation-api" edge="1" parent="1" source="workstation" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="kube-api" value="Kubernetes API / HTTPS">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1000" y="550" />
+              <mxPoint x="1000" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-kraken-api" edge="1" parent="1" source="kraken-service" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#1E5FA8;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#154360;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="kube-api" value="Provision / HTTPS">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1020" y="1150" />
+              <mxPoint x="1020" y="950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-apprepo-operator" edge="1" parent="1" source="app-repository" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="operator" value="Fetch apps / HTTPS">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1020" y="1780" />
+              <mxPoint x="1020" y="1200" />
+              <mxPoint x="2220" y="1200" />
+              <mxPoint x="2220" y="1560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-api-operator" edge="1" parent="1" source="kube-api" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="operator" value="Watch + status / HTTPS">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2240" y="900" />
+              <mxPoint x="2240" y="1440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-operator-standalone" edge="1" parent="1" source="operator" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="standalone" value="Install apps">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="3250" y="1420" />
+              <mxPoint x="3250" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-operator-cm" edge="1" parent="1" source="operator" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="cluster-manager" value="Stage index app">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="3280" y="1550" />
+              <mxPoint x="3280" y="1560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-operator-deployer" edge="1" parent="1" source="operator" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="shc-deployer" value="Stage search apps">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="3280" y="1700" />
+              <mxPoint x="3280" y="2000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-operator-shc" edge="1" parent="1" source="operator" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="search-head-cluster" value="ITSI setup / REST">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2800" y="2340" />
+              <mxPoint x="4320" y="2340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-cm-idxc" edge="1" parent="1" source="cluster-manager" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="indexer-cluster" value="Cluster bundle">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-deployer-shc" edge="1" parent="1" source="shc-deployer" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;" target="search-head-cluster" value="SHC bundle">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4F6F7;strokeColor=#7F8C8D;strokeWidth=2;align=left;verticalAlign=middle;spacing=18;fontFamily=Helvetica;fontSize=14;fontColor=#34495E;shadow=0;" value="&lt;b&gt;UML notation&lt;/b&gt;  3D box = node  ·  rectangle = execution environment  ·  folded page = artifact  ·  solid line = communication path&lt;br&gt;&lt;b&gt;Theme&lt;/b&gt;  Blue = Kraken  ·  Teal = existing SOK / Splunk  ·  Orange = ITSI extension  ·  Gray = external / stock&lt;br&gt;&lt;b&gt;Artifact sources&lt;/b&gt;  SOK image + CRDs via Kraken request  ·  ITSI apps + version from App Repository (S3)" vertex="1">
+          <mxGeometry height="230" width="4050" x="1050" y="2700" as="geometry" />
+        </mxCell>
+        <mxCell id="eQSw4iHbfe_NwyTvvlCo-1" edge="1" parent="1" source="kraken-service" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#1E5FA8;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#154360;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;exitX=0;exitY=0;exitDx=360;exitDy=431;exitPerimeter=0;" value="Provision / HTTPS">
+          <mxGeometry relative="1" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="473" y="1360" />
+            </Array>
+            <mxPoint x="840" y="1690" as="sourcePoint" />
+            <mxPoint x="473" y="1610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eQSw4iHbfe_NwyTvvlCo-2" edge="1" parent="1" source="workstation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0;exitDx=191;exitDy=840;exitPerimeter=0;" target="itsi-aggregate">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-90" y="1500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eQSw4iHbfe_NwyTvvlCo-3" connectable="0" parent="eQSw4iHbfe_NwyTvvlCo-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="HTTPS" vertex="1">
+          <mxGeometry relative="1" x="0.2166" y="4" as="geometry">
+            <mxPoint x="1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
