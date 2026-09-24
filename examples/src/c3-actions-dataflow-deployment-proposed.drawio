@@ -1,0 +1,348 @@
+<mxfile host="Electron" agent="Codex" compressed="false">
+  <diagram id="c3-actions-runtime-deployment" name="Current C3 Runtime Deployment">
+    <mxGraphModel dx="6225" dy="3325" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4700" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rt_bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;pointerEvents=0;" value="" vertex="1">
+          <mxGeometry height="2200" width="5850" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=36;fontStyle=1;fontColor=#0B1F33;" value="C3 Notifications &amp; Actions — Reviewed Runtime Deployment" vertex="1">
+          <mxGeometry height="66" width="4540" x="80" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=19;fontColor=#40566A;" value="Deployment viewpoint: physical containment, deployed artifacts and significant runtime communication paths. Processing order and rule behavior belong in companion behavioral views." vertex="1">
+          <mxGeometry height="56" width="4540" x="80" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_view" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF7FC;strokeColor=#4BA3C7;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#075B88;" value="CURRENT VIEW · REVIEWED STAGING SNAPSHOT" vertex="1">
+          <mxGeometry height="48" width="410" x="80" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_rule" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#52697A;" value="A → B means A uses or invokes B; response traffic is implicit." vertex="1">
+          <mxGeometry height="48" width="1520" x="4180" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_operator" parent="1" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#667785;strokeWidth=2;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="560" width="430" x="60" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_operator_title" parent="rt_operator" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=21;fontColor=#263746;" value="«device»&lt;br&gt;&lt;b&gt;Operator workstation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="340" x="45" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_browser" parent="rt_operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7D8D99;strokeWidth=1.5;align=center;verticalAlign=top;spacingTop=18;fontFamily=Helvetica;fontSize=18;fontColor=#263746;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Web browser&lt;/b&gt;" vertex="1">
+          <mxGeometry height="350" width="340" x="45" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_mfe" parent="rt_browser" style="shape=note;size=16;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FAFBFC;strokeColor=#667785;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#263746;" value="«artifact»&lt;br&gt;&lt;b&gt;C3 Home / Actions client&lt;/b&gt;&lt;br&gt;/home/actions" vertex="1">
+          <mxGeometry height="150" width="250" x="45" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_browser_note" parent="rt_browser" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9E8;strokeColor=#D5A62D;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=15;fontColor=#624B00;" value="Logical client surface; hosting repo was not audited." vertex="1">
+          <mxGeometry height="48" width="260" x="40" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_aws" parent="1" style="shape=cube;size=22;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#E5F3FA;strokeColor=#0B6E99;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="1642" width="4470" x="600" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_aws_title" parent="rt_aws" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=23;fontColor=#075B88;" value="«cloud»&lt;br&gt;&lt;b&gt;Cisco Cloud Control staging · AWS us-west-2&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="3110" x="120" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_eks" parent="rt_aws" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#F1F8FC;strokeColor=#1473A2;strokeWidth=2;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="700" width="4250" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="kiZ_shs7KksXQEyvd2aL-19" parent="rt_eks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4BA3C7;strokeWidth=1.8;align=center;verticalAlign=top;spacingTop=15;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;open-itsi namespace&lt;/b&gt;" vertex="1">
+          <mxGeometry height="540" width="700" x="3400" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kiZ_shs7KksXQEyvd2aL-23" parent="kiZ_shs7KksXQEyvd2aL-19" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FCFE;strokeColor=#1473A2;strokeWidth=1.5;align=center;verticalAlign=top;spacingTop=16;fontFamily=Helvetica;fontSize=17;fontColor=#075B88;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;open-itsi service · all role&lt;/b&gt;" vertex="1">
+          <mxGeometry height="340" width="520" x="100" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="kiZ_shs7KksXQEyvd2aL-24" parent="kiZ_shs7KksXQEyvd2aL-23" style="shape=note;size=16;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1473A2;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;" value="«artifact»&lt;br&gt;&lt;b&gt;open-itsi-service image&lt;/b&gt;&lt;br&gt;SERVICE_ROLE=ALL" vertex="1">
+          <mxGeometry height="135" width="320" x="100" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="kiZ_shs7KksXQEyvd2aL-25" parent="kiZ_shs7KksXQEyvd2aL-23" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF7FC;strokeColor=#8AB8D0;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=17;fontColor=#244B61;" value="SQS + Kafka consumers · Notification persistence&lt;br&gt;Action evaluation + persistence" vertex="1">
+          <mxGeometry height="55" width="410" x="55" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_eks_title" parent="rt_eks" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=20;fontColor=#075B88;" value="«node»&lt;br&gt;&lt;b&gt;Amazon EKS cluster&lt;/b&gt;" vertex="1">
+          <mxGeometry height="58" width="3010" x="110" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_namespace" parent="rt_eks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4BA3C7;strokeWidth=1.8;align=center;verticalAlign=top;spacingTop=15;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;c3-core-backend namespace&lt;/b&gt;" vertex="1">
+          <mxGeometry height="540" width="3130" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_api_env" parent="rt_namespace" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FCFE;strokeColor=#1473A2;strokeWidth=1.5;align=center;verticalAlign=top;spacingTop=16;fontFamily=Helvetica;fontSize=17;fontColor=#075B88;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Notification service · API role&lt;/b&gt;" vertex="1">
+          <mxGeometry height="340" width="420" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_api_image" parent="rt_api_env" style="shape=note;size=16;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1473A2;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;" value="«artifact»&lt;br&gt;&lt;b&gt;c3-notification-service image&lt;/b&gt;&lt;br&gt;SERVICE_ROLE=api" vertex="1">
+          <mxGeometry height="135" width="270" x="75" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_api_scope" parent="rt_api_env" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF7FC;strokeColor=#8AB8D0;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=17;fontColor=#244B61;" value="REST + MCP · user state · Action lifecycle&lt;br&gt;machine-token ingress · tenant/product RBAC" vertex="1">
+          <mxGeometry height="58" width="380" x="20" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_processor_env" parent="rt_namespace" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FCFE;strokeColor=#1473A2;strokeWidth=1.5;align=center;verticalAlign=top;spacingTop=16;fontFamily=Helvetica;fontSize=17;fontColor=#075B88;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Notification service · processor role&lt;/b&gt;" vertex="1">
+          <mxGeometry height="340" width="520" x="510" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_processor_image" parent="rt_processor_env" style="shape=note;size=16;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1473A2;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;" value="«artifact»&lt;br&gt;&lt;b&gt;c3-notification-service image&lt;/b&gt;&lt;br&gt;SERVICE_ROLE=processor" vertex="1">
+          <mxGeometry height="135" width="320" x="100" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_processor_scope" parent="rt_processor_env" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF7FC;strokeColor=#8AB8D0;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=17;fontColor=#244B61;" value="SQS + Kafka consumers · Notification persistence&lt;br&gt;Action evaluation + persistence" vertex="1">
+          <mxGeometry height="55" width="410" x="55" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_ingestion_env" parent="rt_namespace" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FCFE;strokeColor=#1473A2;strokeWidth=1.5;align=center;verticalAlign=top;spacingTop=16;fontFamily=Helvetica;fontSize=17;fontColor=#075B88;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Product-ingestion workloads&lt;/b&gt;" vertex="1">
+          <mxGeometry height="340" width="1150" x="1080" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_ingestion_api" parent="rt_ingestion_env" style="shape=note;size=14;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1473A2;strokeWidth=1.4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;" value="«artifact»&lt;br&gt;&lt;b&gt;c3-ingestion-api&lt;/b&gt;&lt;br&gt;webhooks" vertex="1">
+          <mxGeometry height="120" width="270" x="55" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_dispatcher" parent="rt_ingestion_env" style="shape=note;size=14;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1473A2;strokeWidth=1.4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;" value="«artifact»&lt;br&gt;&lt;b&gt;c3-partner-data-dispatcher&lt;/b&gt;&lt;br&gt;partner exports" vertex="1">
+          <mxGeometry height="120" width="350" x="365" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_collector" parent="rt_ingestion_env" style="shape=note;size=14;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1473A2;strokeWidth=1.4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;" value="«artifact»&lt;br&gt;&lt;b&gt;c3-collector-service&lt;/b&gt;&lt;br&gt;legacy TE poller" vertex="1">
+          <mxGeometry height="120" width="320" x="755" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_ingestion_scope" parent="rt_ingestion_env" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF7FC;strokeColor=#8AB8D0;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=17;fontColor=#244B61;" value="Authoritative product events → shared C3 transports; route varies by product and rollout." vertex="1">
+          <mxGeometry height="55" width="970" x="90" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_jobs_env" parent="rt_namespace" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FCFE;strokeColor=#1473A2;strokeWidth=1.4;align=center;verticalAlign=middle;spacingLeft=18;fontFamily=Helvetica;fontSize=16;fontColor=#075B88;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&amp;nbsp;&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(7, 91, 136), rgb(112, 184, 223));&quot;&gt;Kubernetes CronJobs&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(7, 91, 136), rgb(112, 184, 223));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="340" width="750" x="2320" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XRhBnSMlw4BPMvOGl9RV-2" parent="rt_jobs_env" style="shape=note;size=14;aspect=fixed;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1473A2;strokeWidth=1.4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;" value="&lt;span style=&quot;font-size: 17px;&quot;&gt;«artifact»&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;c3-notification-service image&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;SERVICE_ROLE = CLI jobs&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="320" x="240" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="XRhBnSMlw4BPMvOGl9RV-3" parent="rt_jobs_env" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF7FC;strokeColor=#8AB8D0;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=17;fontColor=#244B61;" value="&lt;div&gt;· topology reference sync · retention cleanup&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="440" x="180" y="263.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_edge_processor_ld" edge="1" parent="rt_namespace" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;dashed=1;dashPattern=8 6;strokeColor=#D97706;strokeWidth=2.3;fontFamily=Helvetica;fontSize=18;fontColor=#8A4800;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.31;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;" target="rt_ld" value="Evaluate ingestion + topology rollout flags / HTTPS">
+          <mxGeometry relative="1" x="-0.3149" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="770" y="12" />
+              <mxPoint x="4460" y="12" />
+              <mxPoint x="4460" y="1149.6" />
+              <mxPoint x="4989.6" y="1149.6" />
+            </Array>
+            <mxPoint x="770" y="79.80000000000001" as="sourcePoint" />
+            <mxPoint x="3870" y="1178.8" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_aurora" parent="rt_aws" style="shape=cube;size=16;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#EAF6EC;strokeColor=#2E7D32;strokeWidth=2;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="420" width="720" x="60" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_aurora_title" parent="rt_aurora" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=19;fontColor=#1F6125;" value="«node»&lt;br&gt;&lt;b&gt;Amazon Aurora PostgreSQL&lt;/b&gt;&lt;br&gt;operational system of record" vertex="1">
+          <mxGeometry height="85" width="610" x="55" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_notifications_store" parent="rt_aurora" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#70A875;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#214F25;" value="&lt;b&gt;Notification projection&lt;/b&gt;&lt;br&gt;notifications · user state · devices&lt;br&gt;notification_device" vertex="1">
+          <mxGeometry height="115" width="300" x="50" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_actions_store" parent="rt_aurora" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#70A875;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#214F25;" value="&lt;b&gt;Action projection&lt;/b&gt;&lt;br&gt;incidents · notification_incident&lt;br&gt;UI Action = backend Incident" vertex="1">
+          <mxGeometry height="115" width="290" x="380" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="kiZ_shs7KksXQEyvd2aL-36" parent="rt_aurora" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#70A875;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#214F25;" value="&lt;b&gt;Open-ITSI Data Store&lt;/b&gt;&lt;br&gt;Notables * Episodes * NEAPS" vertex="1">
+          <mxGeometry height="115" width="290" x="200" y="282" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_sqs" parent="rt_aws" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFDF6;strokeColor=#A77B18;strokeWidth=1.8;align=center;verticalAlign=top;spacingTop=18;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Amazon SQS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="420" width="780" x="850" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_sqs_task_trigger" parent="rt_sqs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C39A3B;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#654D0B;" value="&lt;b&gt;&lt;font face=&quot;Courier New&quot;&gt;task-trigger-q&lt;/font&gt;&lt;/b&gt;&lt;br&gt;TriggeringTask · schedule collections" vertex="1">
+          <mxGeometry height="70" width="690" x="45" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_sqs_task_processor" parent="rt_sqs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C39A3B;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#654D0B;" value="&lt;b&gt;&lt;font face=&quot;Courier New&quot;&gt;task-processor-q&lt;/font&gt;&lt;/b&gt;&lt;br&gt;ProcessingTask · partner/tenant collection dispatch" vertex="1">
+          <mxGeometry height="70" width="690" x="45" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_sqs_notifications" parent="rt_sqs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C39A3B;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#654D0B;" value="&lt;b&gt;&lt;font face=&quot;Courier New&quot;&gt;notifications-q&lt;/font&gt;&lt;/b&gt;&lt;br&gt;Product-specific Notification · processor ingress" vertex="1">
+          <mxGeometry height="70" width="690" x="45" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_sqs_note" parent="rt_sqs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#D5A62D;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=15;fontColor=#624B00;" value="Transport only · DLQs omitted" vertex="1">
+          <mxGeometry height="45" width="650" x="65" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_msk" parent="rt_aws" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFDF6;strokeColor=#A77B18;strokeWidth=1.8;align=center;verticalAlign=top;spacingTop=18;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Amazon MSK / Kafka&lt;/b&gt;" vertex="1">
+          <mxGeometry height="420" width="780" x="1700" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_msk_alerts" parent="rt_msk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C39A3B;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#654D0B;" value="&lt;b&gt;&lt;font face=&quot;Courier New&quot;&gt;c3_alerts_ingestion_v1&lt;/font&gt;&lt;/b&gt;&lt;br&gt;Product alert envelope · processor ingress" vertex="1">
+          <mxGeometry height="70" width="690" x="45" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_msk_notification_changes" parent="rt_msk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C39A3B;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#654D0B;" value="&lt;b&gt;&lt;font face=&quot;Courier New&quot;&gt;c3_notification_changes_v1&lt;/font&gt;&lt;/b&gt;&lt;br&gt;Accepted Notification snapshot · evaluation input" vertex="1">
+          <mxGeometry height="70" width="690" x="45" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_msk_incidents" parent="rt_msk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C39A3B;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#654D0B;" value="&lt;b&gt;&lt;font face=&quot;Courier New&quot;&gt;c3_incidents_v1&lt;/font&gt;&lt;/b&gt;&lt;br&gt;Action-operation intent · CREATE / MERGE / UPDATE / RESOLVE" vertex="1">
+          <mxGeometry height="70" width="690" x="45" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_msk_note" parent="rt_msk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#D5A62D;strokeWidth=1.1;align=center;verticalAlign=middle;spacing=8;fontFamily=Helvetica;fontSize=15;fontColor=#624B00;" value="Transport only · DLQs omitted · no transactional outbox" vertex="1">
+          <mxGeometry height="45" width="650" x="65" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_topology_s3" parent="rt_aws" style="shape=cube;size=16;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#FFF8E9;strokeColor=#A77B18;strokeWidth=1.8;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="420" width="740" x="2550" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_topology_title" parent="rt_topology_s3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=19;fontColor=#654D0B;" value="«node»&lt;br&gt;&lt;b&gt;Amazon S3 topology / asset lake&lt;/b&gt;" vertex="1">
+          <mxGeometry height="75" width="630" x="55" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_topology_data" parent="rt_topology_s3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C39A3B;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#654D0B;" value="Topology + asset Parquet partitions&lt;br&gt;&lt;font color=&quot;#6B7780&quot;&gt;reference data, not Notification history&lt;/font&gt;" vertex="1">
+          <mxGeometry height="115" width="600" x="70" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_topology_note" parent="rt_topology_s3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF6;strokeColor=#D5B86A;strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#654D0B;" value="Synchronized into PostgreSQL reference tables" vertex="1">
+          <mxGeometry height="55" width="500" x="120" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_support_note" parent="rt_aws" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FA;strokeColor=#8AB8D0;strokeWidth=1.2;align=left;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=18;fontColor=#35576A;" value="&lt;b&gt;Supporting dependencies omitted from payload lanes&lt;/b&gt; · Valkey (ingestion rate limit/cache; notification-service health), Secrets Manager, and gateway/auth context." vertex="1">
+          <mxGeometry height="80" width="3230" x="60" y="1492" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_edge_jobs_db" edge="1" parent="rt_aws" source="rt_jobs_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#2E7D32;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#1F6125;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="Load references + cleanup / SQL">
+          <mxGeometry relative="1" x="0.3701" y="10" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="3340.14" y="430" />
+              <mxPoint x="3340.14" y="1452" />
+              <mxPoint x="600.14" y="1452" />
+            </Array>
+            <mxPoint x="600" y="1420.84" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kiZ_shs7KksXQEyvd2aL-35" edge="1" parent="rt_aws" source="kiZ_shs7KksXQEyvd2aL-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#A77B18;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="rt_msk" value="Consume c3_notification_changes_v1&amp;nbsp;+ publish c3_incidents_v1">
+          <mxGeometry relative="1" x="-0.6113" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="3810.14" y="610" />
+              <mxPoint x="3810.14" y="842" />
+              <mxPoint x="2090.14" y="842" />
+            </Array>
+            <mxPoint x="1600" y="982" as="sourcePoint" />
+            <mxPoint x="2352" y="1382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kiZ_shs7KksXQEyvd2aL-37" edge="1" parent="rt_aws" source="kiZ_shs7KksXQEyvd2aL-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#2E7D32;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#1F6125;labelBackgroundColor=#FFFFFF;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=420;entryDy=368;entryPerimeter=0;" target="rt_aurora" value="open itsi datastore">
+          <mxGeometry relative="1" x="-0.8472" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="3950" y="1482" />
+              <mxPoint x="410" y="1482" />
+              <mxPoint x="410" y="1425.13" />
+              <mxPoint x="412" y="1425.13" />
+            </Array>
+            <mxPoint x="5910" y="702" as="sourcePoint" />
+            <mxPoint x="3330" y="1692.84" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_products" parent="1" style="shape=cube;size=18;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#666666;strokeWidth=2;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="560" width="480" x="5220" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_products_title" parent="rt_products" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=21;fontColor=#333333;" value="«node»&lt;br&gt;&lt;b&gt;Authoritative product systems&lt;/b&gt;&lt;br&gt;external sources" vertex="1">
+          <mxGeometry height="90" width="390" x="45" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_product_webhooks" parent="rt_products" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A8A8A;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=17;fontColor=#333333;" value="&lt;b&gt;Webhook / trigger sources&lt;/b&gt;&lt;br&gt;Meraki · Catalyst Center · SD-WAN" vertex="1">
+          <mxGeometry height="100" width="380" x="50" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_product_exports" parent="rt_products" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A8A8A;strokeWidth=1.2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=17;fontColor=#333333;" value="&lt;b&gt;Partner export sources&lt;/b&gt;&lt;br&gt;Intersight · Nexus · HyperFabric · ThousandEyes" vertex="1">
+          <mxGeometry height="110" width="380" x="50" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_product_note" parent="rt_products" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9E8;strokeColor=#D5A62D;strokeWidth=1.1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#624B00;" value="Source systems own alert lifecycle and remediation." vertex="1">
+          <mxGeometry height="55" width="370" x="55" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_openai" parent="1" style="shape=cube;size=16;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#F7F0FF;strokeColor=#7B4AB8;strokeWidth=2;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="250" width="480" x="5220" y="1052" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_openai_title" parent="rt_openai" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=20;fontColor=#553282;" value="«node»&lt;br&gt;&lt;b&gt;Azure OpenAI&lt;/b&gt;&lt;br&gt;optional metadata + narrative" vertex="1">
+          <mxGeometry height="95" width="380" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_openai_note" parent="rt_openai" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A582CC;strokeWidth=1.1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#553282;" value="No Action membership, severity or status decision" vertex="1">
+          <mxGeometry height="48" width="360" x="60" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_ld" parent="1" style="shape=cube;size=16;direction=south;perimeter=rectanglePerimeter;whiteSpace=wrap;html=1;fillColor=#FFF4E8;strokeColor=#D97706;strokeWidth=2;container=1;collapsible=0;recursiveResize=0;" value="" vertex="1">
+          <mxGeometry height="250" width="480" x="5220" y="1382" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_ld_title" parent="rt_ld" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=20;fontColor=#8A4800;" value="«node»&lt;br&gt;&lt;b&gt;LaunchDarkly&lt;/b&gt;&lt;br&gt;tenant rollout controls" vertex="1">
+          <mxGeometry height="95" width="380" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_ld_note" parent="rt_ld" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E7A34B;strokeWidth=1.1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#7A4300;" value="Topology, ingestion and processing gates vary by tenant/environment" vertex="1">
+          <mxGeometry height="48" width="360" x="60" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_edge_browser_api" edge="1" parent="1" source="rt_mfe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#176C9C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=18;fontColor=#075B88;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="rt_api_env" value="Use Notifications + Actions / HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_edge_api_notifications" edge="1" parent="1" source="rt_api_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#2E7D32;strokeWidth=2.3;fontFamily=Helvetica;fontSize=18;fontColor=#1F6125;labelBackgroundColor=#FFFFFF;exitX=0.25;exitY=1;entryX=0.481;entryY=-0.01;entryDx=0;entryDy=0;entryPerimeter=0;" target="rt_notifications_store" value="Read / write Notifications / SQL">
+          <mxGeometry relative="1" x="-0.0465" y="-115" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="855.04" y="1336.81" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_processor_actions" edge="1" parent="1" source="rt_processor_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#2E7D32;strokeWidth=2.3;fontFamily=Helvetica;fontSize=18;fontColor=#1F6125;labelBackgroundColor=#FFFFFF;exitX=0.15;exitY=1;entryX=0.9;entryY=0;" target="rt_actions_store" value="Persist + query Actions / SQL">
+          <mxGeometry relative="1" x="-0.7034" y="82" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1301" y="788" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_processor_notifications" edge="1" parent="1" source="rt_processor_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#2E7D32;strokeWidth=2.3;fontFamily=Helvetica;fontSize=18;fontColor=#1F6125;labelBackgroundColor=#FFFFFF;exitX=0.05;exitY=1;entryX=0.598;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" target="rt_notifications_store" value="Notification state / SQL">
+          <mxGeometry relative="1" x="-0.0106" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1246.08" y="1050.08" />
+              <mxPoint x="889.46" y="1050.08" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_processor_sqs" edge="1" parent="1" source="rt_processor_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#A77B18;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;labelBackgroundColor=#FFFFFF;exitX=0.629;exitY=1.004;entryX=0.124;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="rt_sqs" value="Consume notifications-q">
+          <mxGeometry relative="1" x="-0.7957" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_ingestion_sqs" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#A77B18;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;labelBackgroundColor=#FFFFFF;entryX=0.75;entryY=0;" target="rt_sqs" value="Use task-trigger-q + task-processor-q&lt;br&gt;publish notifications-q">
+          <mxGeometry relative="1" x="-0.79" y="-15" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2035" y="788" />
+            </Array>
+            <mxPoint x="2035" y="788" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_processor_msk" edge="1" parent="1" source="rt_processor_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#A77B18;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;labelBackgroundColor=#FFFFFF;exitX=0.9;exitY=1;entryX=0.18;entryY=0;" target="rt_msk" value="Consume c3_alerts_ingestion_v1&lt;br&gt;publish + consume downstream topics">
+          <mxGeometry relative="1" x="-0.4724" y="-30" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="1688" y="1030" />
+              <mxPoint x="2440.33" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_ingestion_msk" edge="1" parent="1" source="rt_ingestion_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#A77B18;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;labelBackgroundColor=#FFFFFF;exitX=0.7;exitY=1;entryX=0.38;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" target="rt_msk" value="Publish c3_alerts_ingestion_v1 envelopes">
+          <mxGeometry relative="1" x="-0.7884" y="15" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2595" y="1050" />
+              <mxPoint x="2596.33" y="1185.17" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_jobs_s3" edge="1" parent="1" source="rt_jobs_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#A77B18;strokeWidth=2.2;fontFamily=Helvetica;fontSize=18;fontColor=#654D0B;labelBackgroundColor=#FFFFFF;exitX=0.707;exitY=0.991;entryX=-0.001;entryY=0.447;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="rt_topology_s3" value="Read reference partitions">
+          <mxGeometry relative="1" x="-0.7763" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="3560.33" y="788" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_products_ingestion" edge="1" parent="1" source="rt_products" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#667785;strokeWidth=2.3;fontFamily=Helvetica;fontSize=18;fontColor=#3D4B55;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.42;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="rt_ingestion_env" value="Submit webhook + export alerts / HTTPS + S3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5498.4" y="320.07" />
+              <mxPoint x="2652.53" y="320.07" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_edge_processor_openai" edge="1" parent="1" source="rt_processor_env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;dashed=1;dashPattern=8 6;strokeColor=#7B4AB8;strokeWidth=2.3;fontFamily=Helvetica;fontSize=18;fontColor=#553282;labelBackgroundColor=#FFFFFF;exitX=0.893;exitY=0.004;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=133;entryDy=480;entryPerimeter=0;" target="rt_openai" value="Optional classification / HTTPS">
+          <mxGeometry relative="1" x="-0.237" as="geometry">
+            <mxPoint x="-1" as="offset" />
+            <Array as="points">
+              <mxPoint x="1688" y="430" />
+              <mxPoint x="5140" y="430" />
+              <mxPoint x="5140" y="1185.2" />
+            </Array>
+            <mxPoint x="1688" y="427.89" as="sourcePoint" />
+            <mxPoint x="4580" y="1205.23" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt_invariants" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF6EC;strokeColor=#70A875;strokeWidth=1.4;align=left;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=17;fontColor=#214F25;" value="&lt;b&gt;Runtime invariants&lt;/b&gt; · Aurora is the Notification/Action system of record. SQS and MSK are transports. S3 supplies reference data. Product systems remain authoritative for the original alert." vertex="1">
+          <mxGeometry height="105" width="3070" x="80" y="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_snapshot" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F8;strokeColor=#8A98A3;strokeWidth=1.3;align=left;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=18;fontColor=#40515E;" value="&lt;b&gt;Evidence snapshot&lt;/b&gt;&lt;br&gt;Reviewed staging: c3-typescript-apps ac88a41d · c3-ingestion-apps e54c5292. Current upstream revisions, live Helm values and tenant flags may differ." vertex="1">
+          <mxGeometry height="105" width="1320" x="3300" y="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_legend" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#52697A;" value="3D box = device/node/cloud · rectangle = execution environment or runtime resource · folded page = deployed artifact · solid path = runtime communication · dashed path = optional/configuration dependency" vertex="1">
+          <mxGeometry height="58" width="4540" x="80" y="2020" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

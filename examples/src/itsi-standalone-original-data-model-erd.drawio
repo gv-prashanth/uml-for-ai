@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-08-26T00:00:00.000Z" agent="Codex" version="26.0.0" type="device">
+  <diagram id="itsi-standalone-current-data-model" name="Current Data Model">
+    <mxGraphModel dx="6000" dy="3800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="6000" pageHeight="3800" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="background" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="6000" height="3800" as="geometry"/>
+        </mxCell>
+        <mxCell id="title" value="ITSI Standalone — Current Data Model Entity Relationship Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=32;fontStyle=1;fontColor=#17202A;" vertex="1" parent="1">
+          <mxGeometry x="80" y="35" width="5800" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Physical SQLite schema, JSON document subtypes, derived Episode projection, and PSR scalability hotspots • implementation as of 2026-08-26" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#34495E;" vertex="1" parent="1">
+          <mxGeometry x="80" y="92" width="5800" height="38" as="geometry"/>
+        </mxCell>
+
+        <!-- PHYSICAL SQLITE BOUNDARY -->
+        <mxCell id="physical-boundary" value="&lt;b&gt;PHYSICAL SQLITE SCHEMA&lt;/b&gt;&lt;br&gt;itsi-standalone/data/openitsi.db • WAL mode • one application database" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=3;align=left;verticalAlign=top;spacingTop=18;spacingLeft=22;spacingRight=14;fontFamily=Helvetica;fontSize=20;fontColor=#873600;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="2060" height="2910" as="geometry"/>
+        </mxCell>
+        <mxCell id="physical-note" value="&lt;b&gt;Important:&lt;/b&gt; PRAGMA foreign_keys=ON is enabled, but the schema declares &lt;b&gt;zero FOREIGN KEY constraints&lt;/b&gt;. Dashed relationships below are maintained only by application code." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF5E7;strokeColor=#C25700;strokeWidth=2;dashed=1;dashPattern=8 5;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=15;fontColor=#873600;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="100" y="105" width="1840" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- collections -->
+        <mxCell id="table-collections" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C25700;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="100" y="260" width="780" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-collections-header" value="«table»&lt;br&gt;&lt;b&gt;collections&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#FAD7A0;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#873600;fontStyle=1;" vertex="1" parent="table-collections">
+          <mxGeometry x="0" y="0" width="780" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-collections-sep" value="" style="rounded=0;fillColor=#C25700;strokeColor=#C25700;strokeWidth=1;" vertex="1" parent="table-collections">
+          <mxGeometry x="0" y="62" width="780" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-collections-attrs" value="&lt;b&gt;PK&lt;/b&gt;  name: TEXT&lt;br&gt;NN  app: TEXT = 'SA-ITOA'&lt;br&gt;NN  config_json: TEXT {JSON}&lt;br&gt;NN  updated_at: REAL" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=14;fontFamily=Menlo;fontSize=15;fontColor=#17202A;" vertex="1" parent="table-collections">
+          <mxGeometry x="0" y="63" width="780" height="267" as="geometry"/>
+        </mxCell>
+
+        <!-- documents -->
+        <mxCell id="table-documents" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B03A2E;strokeWidth=4;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="1080" y="260" width="860" height="410" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-documents-header" value="«table» • PSR HOT PATH&lt;br&gt;&lt;b&gt;documents&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#F5B7B1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#78281F;fontStyle=1;" vertex="1" parent="table-documents">
+          <mxGeometry x="0" y="0" width="860" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-documents-sep" value="" style="rounded=0;fillColor=#B03A2E;strokeColor=#B03A2E;strokeWidth=1;" vertex="1" parent="table-documents">
+          <mxGeometry x="0" y="70" width="860" height="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-documents-attrs" value="&lt;b&gt;PK&lt;/b&gt;  collection_name: TEXT&lt;br&gt;&lt;b&gt;PK&lt;/b&gt;  document_key: TEXT&lt;br&gt;NN  document_json: TEXT {JSON}&lt;br&gt;NN  updated_at: REAL&lt;br&gt;&lt;br&gt;&lt;b&gt;INDEX&lt;/b&gt; documents_collection_updated&lt;br&gt;  (collection_name, updated_at)&lt;br&gt;&lt;br&gt;No FK to collections • no tenant_id" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=13;fontFamily=Menlo;fontSize=14;fontColor=#17202A;" vertex="1" parent="table-documents">
+          <mxGeometry x="0" y="71" width="860" height="339" as="geometry"/>
+        </mxCell>
+
+        <!-- properties -->
+        <mxCell id="table-properties" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C25700;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="100" y="800" width="780" height="350" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-properties-header" value="«table»&lt;br&gt;&lt;b&gt;properties&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#FAD7A0;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#873600;fontStyle=1;" vertex="1" parent="table-properties">
+          <mxGeometry x="0" y="0" width="780" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-properties-attrs" value="&lt;b&gt;PK&lt;/b&gt;  conf_name: TEXT&lt;br&gt;&lt;b&gt;PK&lt;/b&gt;  stanza: TEXT&lt;br&gt;&lt;b&gt;PK&lt;/b&gt;  property_key: TEXT&lt;br&gt;NN  property_json: TEXT {JSON}&lt;br&gt;NN  updated_at: REAL&lt;br&gt;&lt;br&gt;Splunk conf/stanza/property compatibility KV" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=14;fontFamily=Menlo;fontSize=14;fontColor=#17202A;" vertex="1" parent="table-properties">
+          <mxGeometry x="0" y="63" width="780" height="287" as="geometry"/>
+        </mxCell>
+
+        <!-- runtime_values -->
+        <mxCell id="table-runtime-values" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C25700;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="1080" y="800" width="860" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-runtime-values-header" value="«table»&lt;br&gt;&lt;b&gt;runtime_values&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#FAD7A0;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#873600;fontStyle=1;" vertex="1" parent="table-runtime-values">
+          <mxGeometry x="0" y="0" width="860" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-runtime-values-attrs" value="&lt;b&gt;PK&lt;/b&gt;  value_key: TEXT&lt;br&gt;NN  value_json: TEXT {JSON}&lt;br&gt;NN  updated_at: REAL&lt;br&gt;&lt;br&gt;Examples: hec_token, hec_token_name" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=14;fontFamily=Menlo;fontSize=15;fontColor=#17202A;" vertex="1" parent="table-runtime-values">
+          <mxGeometry x="0" y="63" width="860" height="247" as="geometry"/>
+        </mxCell>
+
+        <!-- request_log -->
+        <mxCell id="table-request-log" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B03A2E;strokeWidth=3;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="100" y="1350" width="780" height="450" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-request-log-header" value="«table» • GROWTH RISK&lt;br&gt;&lt;b&gt;request_log&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#FDEDEC;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#78281F;fontStyle=1;" vertex="1" parent="table-request-log">
+          <mxGeometry x="0" y="0" width="780" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-request-log-attrs" value="&lt;b&gt;PK&lt;/b&gt;  id: INTEGER AUTOINCREMENT&lt;br&gt;NN  recorded_at: REAL&lt;br&gt;NN  method: TEXT&lt;br&gt;NN  path: TEXT&lt;br&gt;NN  query_json: TEXT {JSON}&lt;br&gt;NN  headers_json: TEXT {JSON}&lt;br&gt;NN  body: BLOB&lt;br&gt;&lt;br&gt;Body stores omission metadata + SHA-256&lt;br&gt;No secondary index • explicit clear only" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=13;fontFamily=Menlo;fontSize=14;fontColor=#17202A;" vertex="1" parent="table-request-log">
+          <mxGeometry x="0" y="71" width="780" height="379" as="geometry"/>
+        </mxCell>
+
+        <!-- search_jobs -->
+        <mxCell id="table-search-jobs" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B03A2E;strokeWidth=3;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="1080" y="1350" width="860" height="410" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-search-jobs-header" value="«table» • GROWTH RISK&lt;br&gt;&lt;b&gt;search_jobs&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#FDEDEC;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#78281F;fontStyle=1;" vertex="1" parent="table-search-jobs">
+          <mxGeometry x="0" y="0" width="860" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-search-jobs-attrs" value="&lt;b&gt;PK&lt;/b&gt;  sid: TEXT&lt;br&gt;NN  created_at: REAL&lt;br&gt;NN  query_text: TEXT&lt;br&gt;NN  plan_name: TEXT&lt;br&gt;NN  state: TEXT&lt;br&gt;NN  results_json: TEXT {JSON array}&lt;br&gt;&lt;br&gt;Stores fully materialized search results&lt;br&gt;Persists until client DELETE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=13;fontFamily=Menlo;fontSize=14;fontColor=#17202A;" vertex="1" parent="table-search-jobs">
+          <mxGeometry x="0" y="71" width="860" height="339" as="geometry"/>
+        </mxCell>
+
+        <!-- hec_acks -->
+        <mxCell id="table-hec-acks" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C25700;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="100" y="2210" width="780" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-hec-acks-header" value="«table»&lt;br&gt;&lt;b&gt;hec_acks&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#FAD7A0;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#873600;fontStyle=1;" vertex="1" parent="table-hec-acks">
+          <mxGeometry x="0" y="0" width="780" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-hec-acks-attrs" value="&lt;b&gt;PK&lt;/b&gt;  ack_id: INTEGER AUTOINCREMENT&lt;br&gt;NN  recorded_at: REAL&lt;br&gt;&lt;br&gt;One ACK may cover a HEC request batch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=14;fontFamily=Menlo;fontSize=15;fontColor=#17202A;" vertex="1" parent="table-hec-acks">
+          <mxGeometry x="0" y="63" width="780" height="197" as="geometry"/>
+        </mxCell>
+
+        <!-- hec_events -->
+        <mxCell id="table-hec-events" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B03A2E;strokeWidth=4;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="physical-boundary">
+          <mxGeometry x="1020" y="2050" width="920" height="650" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-hec-events-header" value="«table» • PSR HOT PATH&lt;br&gt;&lt;b&gt;hec_events&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#F5B7B1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=17;fontColor=#78281F;fontStyle=1;" vertex="1" parent="table-hec-events">
+          <mxGeometry x="0" y="0" width="920" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="table-hec-events-attrs" value="&lt;b&gt;PK&lt;/b&gt;  id: INTEGER AUTOINCREMENT&lt;br&gt;NN  recorded_at: REAL&lt;br&gt;    token: TEXT?&lt;br&gt;    request_channel: TEXT?&lt;br&gt;    ack_id: INTEGER?  (no FK)&lt;br&gt;    index_name/source/sourcetype/host: TEXT?&lt;br&gt;    event_time: REAL?&lt;br&gt;NN  envelope_json: TEXT {JSON}&lt;br&gt;&lt;br&gt;&lt;b&gt;INDEXES&lt;/b&gt;&lt;br&gt;  (recorded_at, id)&lt;br&gt;  (index_name, event_time, id)&lt;br&gt;  (json $.event.itsi_group_id, id)&lt;br&gt;&lt;br&gt;Append-only snapshots • no retention/uniqueness" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="table-hec-events">
+          <mxGeometry x="0" y="71" width="920" height="579" as="geometry"/>
+        </mxCell>
+
+        <!-- physical soft associations -->
+        <mxCell id="rel-collections-documents" value="application-maintained catalog link" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#873600;labelBackgroundColor=#FFF8F1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="physical-boundary" source="table-collections" target="table-documents">
+          <mxGeometry x="0" y="-14" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="mult-collections-one" value="1" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#873600;" vertex="1" parent="physical-boundary"><mxGeometry x="890" y="405" width="30" height="24" as="geometry"/></mxCell>
+        <mxCell id="mult-documents-many" value="0..*" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#873600;" vertex="1" parent="physical-boundary"><mxGeometry x="1030" y="405" width="42" height="24" as="geometry"/></mxCell>
+        <mxCell id="rel-acks-events" value="ack_id • nullable • no FK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#873600;labelBackgroundColor=#FFF8F1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="physical-boundary" source="table-hec-acks" target="table-hec-events">
+          <mxGeometry x="0" y="-14" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="mult-acks-optional" value="0..1" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#873600;" vertex="1" parent="physical-boundary"><mxGeometry x="885" y="2320" width="44" height="24" as="geometry"/></mxCell>
+        <mxCell id="mult-events-many" value="0..*" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#873600;" vertex="1" parent="physical-boundary"><mxGeometry x="968" y="2320" width="44" height="24" as="geometry"/></mxCell>
+
+        <!-- LOGICAL MODEL BOUNDARY -->
+        <mxCell id="logical-boundary" value="&lt;b&gt;LOGICAL ENTITIES ENCODED IN JSON&lt;/b&gt;&lt;br&gt;Conceptual types and joins used by ITSI Standalone • not separate normalized SQL tables" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#5D6D7E;strokeWidth=3;align=left;verticalAlign=top;spacingTop=18;spacingLeft=22;spacingRight=14;fontFamily=Helvetica;fontSize=20;fontColor=#2C3E50;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="170" width="3660" height="2910" as="geometry"/>
+        </mxCell>
+        <mxCell id="logical-discriminator-note" value="&lt;b&gt;DOCUMENTS discriminator&lt;/b&gt; • Every entity with a blue header is one row in &lt;b&gt;documents&lt;/b&gt;; collection_name selects the JSON shape. The enum is open, and JSON fields have no SQL FK/CHECK constraints." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF5FB;strokeColor=#5D6D7E;strokeWidth=2;dashed=1;dashPattern=8 5;align=left;verticalAlign=middle;spacing=13;fontFamily=Helvetica;fontSize=14;fontColor=#2C3E50;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="80" y="105" width="3480" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Policy document -->
+        <mxCell id="entity-policy" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="100" y="270" width="760" height="390" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-policy-header" value="«JSON document»&lt;br&gt;&lt;b&gt;NEAP Policy&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-policy"><mxGeometry x="0" y="0" width="760" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-policy-attrs" value="collection: itsi_notable_event_aggregation_policy&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = policy_id&lt;br&gt;title / priority / disabled / is_default&lt;br&gt;filter_criteria / split_by_field / breaking_criteria&lt;br&gt;group title / owner / severity / status&lt;br&gt;rules[] and action clauses embedded in JSON&lt;br&gt;&lt;br&gt;Also contains ranking-config subtype" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-policy"><mxGeometry x="0" y="63" width="760" height="327" as="geometry"/></mxCell>
+
+        <!-- System episode document -->
+        <mxCell id="entity-system-episode" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B03A2E;strokeWidth=3;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="1080" y="270" width="850" height="440" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-system-header" value="«JSON document» • PSR SOURCE&lt;br&gt;&lt;b&gt;Episode System Snapshot&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#F5B7B1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#78281F;fontStyle=1;" vertex="1" parent="entity-system-episode"><mxGeometry x="0" y="0" width="850" height="68" as="geometry"/></mxCell>
+        <mxCell id="entity-system-attrs" value="collection: itsi_notable_group_system&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = episode_key&lt;br&gt;itsi_policy_id  {soft policy ref}&lt;br&gt;first_event_id  {soft event ref}&lt;br&gt;parent_group_id  {optional self ref}&lt;br&gt;event_count / start_time / last_time / is_active&lt;br&gt;title / description / split_by_hash&lt;br&gt;action_rule_keys / execution counters&lt;br&gt;&lt;br&gt;One current Java-owned row per group when present" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=11;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-system-episode"><mxGeometry x="0" y="69" width="850" height="371" as="geometry"/></mxCell>
+
+        <!-- User episode document -->
+        <mxCell id="entity-user-episode" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B03A2E;strokeWidth=3;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="2180" y="270" width="760" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-user-header" value="«JSON document» • PSR SOURCE&lt;br&gt;&lt;b&gt;Episode User Snapshot&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#F5B7B1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#78281F;fontStyle=1;" vertex="1" parent="entity-user-episode"><mxGeometry x="0" y="0" width="760" height="68" as="geometry"/></mxCell>
+        <mxCell id="entity-user-attrs" value="collection: itsi_notable_group_user&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = episode_key&lt;br&gt;owner / severity / status / instruction&lt;br&gt;event_identifier_hash&lt;br&gt;severity and status change timestamps&lt;br&gt;&lt;br&gt;Expected same key as system snapshot; not enforced" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-user-episode"><mxGeometry x="0" y="69" width="760" height="291" as="geometry"/></mxCell>
+
+        <!-- Tracked event -->
+        <mxCell id="entity-tracked-event" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="100" y="880" width="790" height="370" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-tracked-header" value="«JSON document»&lt;br&gt;&lt;b&gt;Tracked Notable Input&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-tracked-event"><mxGeometry x="0" y="0" width="790" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-tracked-attrs" value="collection: openitsi_tracked_events&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = SHA-256({event,time})&lt;br&gt;event: JSON object&lt;br&gt;  event.event_id  {logical event identity}&lt;br&gt;  title / severity / status / owner / source / ...&lt;br&gt;time: REAL&lt;br&gt;&lt;br&gt;Persisted after NATS PubAck • no stream sequence retained" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-tracked-event"><mxGeometry x="0" y="63" width="790" height="307" as="geometry"/></mxCell>
+
+        <!-- Derived episode -->
+        <mxCell id="entity-derived-episode" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF1E6;strokeColor=#B03A2E;strokeWidth=4;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="1280" y="930" width="1050" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-derived-header" value="«derived entity» • PRIMARY PSR BOTTLENECK&lt;br&gt;&lt;b&gt;Episode Projection — NOT A TABLE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#F5B7B1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=18;fontColor=#78281F;fontStyle=1;" vertex="1" parent="entity-derived-episode"><mxGeometry x="0" y="0" width="1050" height="78" as="geometry"/></mxCell>
+        <mxCell id="entity-derived-attrs" value="&lt;b&gt;ID&lt;/b&gt;  episode_key = union of:&lt;br&gt;  system.document_key&lt;br&gt;  user.document_key&lt;br&gt;  HEC envelope.event.itsi_group_id&lt;br&gt;&lt;br&gt;Read path overlays system → user → latest HEC snapshot.&lt;br&gt;List path scans/JSON-decodes all three sources, window-ranks HEC,&lt;br&gt;unions keys, computes exact COUNT, then repeats for ORDER + LIMIT.&lt;br&gt;&lt;br&gt;&lt;b&gt;There is no indexed one-row-per-episode read model.&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=18;spacingTop=14;fontFamily=Menlo;fontSize=14;fontColor=#17202A;" vertex="1" parent="entity-derived-episode"><mxGeometry x="0" y="79" width="1050" height="421" as="geometry"/></mxCell>
+
+        <!-- Action queue job -->
+        <mxCell id="entity-action-job" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="2730" y="860" width="800" height="440" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-action-job-header" value="«JSON document»&lt;br&gt;&lt;b&gt;Action Queue Job&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-action-job"><mxGeometry x="0" y="0" width="800" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-action-job-attrs" value="collections:&lt;br&gt;  itsi_notable_event_actions_queue&lt;br&gt;  itsi_notable_event_actions_queue_tmp&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = queue_job_key&lt;br&gt;object_type = action_queue_job&lt;br&gt;create_time / sub_object_type&lt;br&gt;content.name / content.params / content.ids[]&lt;br&gt;content._group_data.event.itsi_group_id&lt;br&gt;&lt;br&gt;Transient: deleted after dispatch attempt&lt;br&gt;(collections also contain consumer registration docs)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=10;fontFamily=Menlo;fontSize=12;fontColor=#17202A;" vertex="1" parent="entity-action-job"><mxGeometry x="0" y="63" width="800" height="377" as="geometry"/></mxCell>
+
+        <!-- HEC envelope -->
+        <mxCell id="entity-hec-envelope" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B03A2E;strokeWidth=4;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="100" y="1510" width="850" height="480" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-hec-header" value="«embedded JSON» • PSR HOT PATH&lt;br&gt;&lt;b&gt;Grouped HEC Snapshot Envelope&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#F5B7B1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#78281F;fontStyle=1;" vertex="1" parent="entity-hec-envelope"><mxGeometry x="0" y="0" width="850" height="68" as="geometry"/></mxCell>
+        <mxCell id="entity-hec-attrs" value="stored in: hec_events.envelope_json&lt;br&gt;index = itsi_grouped_alerts&lt;br&gt;event.itsi_group_id  {episode_key}&lt;br&gt;event.event_id  {soft tracked-event ref}&lt;br&gt;event.itsi_policy_id  {soft policy ref}&lt;br&gt;event.itsi_is_first_event / itsi_is_last_event&lt;br&gt;event.itsi_dummy_closing_flag&lt;br&gt;group presentation fields and EventiQ state&lt;br&gt;&lt;br&gt;0..* historical snapshots per episode&lt;br&gt;Repeated close snapshots are not deduplicated" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=11;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-hec-envelope"><mxGeometry x="0" y="69" width="850" height="411" as="geometry"/></mxCell>
+
+        <!-- Webhook -->
+        <mxCell id="entity-webhook" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="2730" y="1510" width="800" height="370" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-webhook-header" value="«JSON document»&lt;br&gt;&lt;b&gt;Webhook Configuration&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-webhook"><mxGeometry x="0" y="0" width="800" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-webhook-attrs" value="collection: openitsi_webhooks&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key&lt;br&gt;name  {application-unique; no SQL index}&lt;br&gt;uri / header / payload / description&lt;br&gt;auth_type / username / allowed_ips&lt;br&gt;disabled / should_ssl_verified&lt;br&gt;&lt;br&gt;Queue job duplicates webhook_name + webhook_uri" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-webhook"><mxGeometry x="0" y="63" width="800" height="307" as="geometry"/></mxCell>
+
+        <!-- EventIQ run -->
+        <mxCell id="entity-eventiq-run" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="1050" y="2050" width="730" height="350" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-eventiq-header" value="«JSON document»&lt;br&gt;&lt;b&gt;EventiQ Command Run&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-eventiq-run"><mxGeometry x="0" y="0" width="730" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-eventiq-attrs" value="collection: openitsi_eventiq_command_runs&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = run UUID&lt;br&gt;command / started_at / ended_at / duration_ms&lt;br&gt;input_event_count / output_count / success / error?&lt;br&gt;&lt;br&gt;Append history • no retention" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-eventiq-run"><mxGeometry x="0" y="63" width="730" height="287" as="geometry"/></mxCell>
+
+        <!-- Runtime error -->
+        <mxCell id="entity-runtime-error" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="1880" y="2050" width="730" height="350" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-error-header" value="«JSON document»&lt;br&gt;&lt;b&gt;Runtime Error Evidence&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-runtime-error"><mxGeometry x="0" y="0" width="730" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-error-attrs" value="collection: openitsi_runtime_errors&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = error UUID&lt;br&gt;timestamp / source / message / detail&lt;br&gt;method / path / status + optional context&lt;br&gt;&lt;br&gt;Append evidence • manual clear only" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-runtime-error"><mxGeometry x="0" y="63" width="730" height="287" as="geometry"/></mxCell>
+
+        <!-- Action execution -->
+        <mxCell id="entity-action-execution" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="2730" y="2070" width="800" height="370" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-execution-header" value="«JSON document»&lt;br&gt;&lt;b&gt;Action Execution Evidence&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-action-execution"><mxGeometry x="0" y="0" width="800" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-execution-attrs" value="collection: openitsi_action_executions&lt;br&gt;&lt;b&gt;ID&lt;/b&gt;  _key = queue key (or SHA-256 derivative)&lt;br&gt;queue_collection / action_name / status&lt;br&gt;started_at / claimed_at / finished_at / exit_code&lt;br&gt;stdout / stderr / outcome / resource evidence&lt;br&gt;&lt;br&gt;Durable claim + terminal evidence; job may be gone" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-action-execution"><mxGeometry x="0" y="63" width="800" height="307" as="geometry"/></mxCell>
+
+        <!-- Generic/other variants -->
+        <mxCell id="entity-generic-kv" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5D6D7E;strokeWidth=2.5;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="logical-boundary">
+          <mxGeometry x="100" y="2240" width="800" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="entity-generic-header" value="«JSON document family»&lt;br&gt;&lt;b&gt;Other / Vendor KV Documents&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#D6EAF8;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#1B4F72;fontStyle=1;" vertex="1" parent="entity-generic-kv"><mxGeometry x="0" y="0" width="800" height="62" as="geometry"/></mxCell>
+        <mxCell id="entity-generic-attrs" value="Seeded but shape not defined here:&lt;br&gt;  itsi_event_management&lt;br&gt;&lt;br&gt;Generic KV compatibility API may create additional&lt;br&gt;collection names and opaque document shapes dynamically.&lt;br&gt;&lt;br&gt;Therefore collection_name is not a closed discriminator enum." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;spacingLeft=16;spacingTop=12;fontFamily=Menlo;fontSize=13;fontColor=#17202A;" vertex="1" parent="entity-generic-kv"><mxGeometry x="0" y="63" width="800" height="297" as="geometry"/></mxCell>
+
+        <!-- Logical associations: all dashed because no FK -->
+        <mxCell id="rel-policy-system" value="itsi_policy_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#5D6D7E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2C3E50;labelBackgroundColor=#F8FAFC;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="logical-boundary" source="entity-policy" target="entity-system-episode"><mxGeometry x="0" y="-14" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="mult-policy-optional" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="870" y="448" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-system-many" value="0..*" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="1025" y="448" width="46" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="rel-system-user" value="same episode_key • expected pair" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#B03A2E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#78281F;labelBackgroundColor=#F8FAFC;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="logical-boundary" source="entity-system-episode" target="entity-user-episode"><mxGeometry x="0" y="-14" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="mult-system-pair" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="1940" y="448" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-user-pair" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="2128" y="448" width="46" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="rel-system-derived" value="system source" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#B03A2E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#78281F;labelBackgroundColor=#F8FAFC;exitX=0.45;exitY=1;entryX=0.38;entryY=0;" edge="1" parent="logical-boundary" source="entity-system-episode" target="entity-derived-episode"><mxGeometry x="0" y="-12" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="rel-user-derived" value="user overlay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#B03A2E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#78281F;labelBackgroundColor=#F8FAFC;exitX=0.35;exitY=1;entryX=0.82;entryY=0;" edge="1" parent="logical-boundary" source="entity-user-episode" target="entity-derived-episode"><mxGeometry x="0" y="-12" relative="1" as="geometry"><Array as="points"><mxPoint x="2446" y="820"/><mxPoint x="2141" y="820"/></Array><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="mult-system-source" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="1430" y="718" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-user-source" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="2420" y="640" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-derived-system-one" value="1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="1660" y="900" width="28" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-derived-user-one" value="1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="2130" y="900" width="28" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="rel-tracked-hec" value="event.event_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#5D6D7E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2C3E50;labelBackgroundColor=#F8FAFC;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="logical-boundary" source="entity-tracked-event" target="entity-hec-envelope"><mxGeometry x="0" y="-12" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="mult-tracked-optional" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="475" y="1260" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-hec-by-event" value="0..*" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="475" y="1480" width="46" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="rel-hec-derived" value="episode_key • latest overlay + member history" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#B03A2E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#78281F;labelBackgroundColor=#F8FAFC;exitX=1;exitY=0.35;entryX=0;entryY=0.8;" edge="1" parent="logical-boundary" source="entity-hec-envelope" target="entity-derived-episode"><mxGeometry x="0" y="-14" relative="1" as="geometry"><Array as="points"><mxPoint x="1100" y="1678"/><mxPoint x="1100" y="1330"/></Array><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="mult-hec-many" value="0..*" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="960" y="1650" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-derived-hec-one" value="1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#78281F;" vertex="1" parent="logical-boundary"><mxGeometry x="1242" y="1310" width="28" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="rel-derived-action" value="nested itsi_group_id • optional" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#5D6D7E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2C3E50;labelBackgroundColor=#F8FAFC;exitX=1;exitY=0.45;entryX=0;entryY=0.45;" edge="1" parent="logical-boundary" source="entity-derived-episode" target="entity-action-job"><mxGeometry x="0" y="-14" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="mult-derived-action-optional" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="2340" y="1135" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-action-many" value="0..*" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="2675" y="1038" width="46" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="rel-action-webhook" value="webhook_name + duplicated URI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#5D6D7E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2C3E50;labelBackgroundColor=#F8FAFC;exitX=0.72;exitY=1;entryX=0.72;entryY=0;" edge="1" parent="logical-boundary" source="entity-action-job" target="entity-webhook"><mxGeometry x="0" y="-12" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry></mxCell>
+        <mxCell id="mult-webhook-jobs" value="0..*" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="3285" y="1315" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-webhook-optional" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="3285" y="1480" width="46" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="rel-action-execution" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 5;endArrow=none;startArrow=none;strokeColor=#5D6D7E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2C3E50;labelBackgroundColor=#F8FAFC;exitX=0.25;exitY=1;entryX=0.25;entryY=0;" edge="1" parent="logical-boundary" source="entity-action-job" target="entity-action-execution"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2930" y="1430"/><mxPoint x="2670" y="1430"/><mxPoint x="2670" y="2000"/><mxPoint x="2930" y="2000"/></Array></mxGeometry></mxCell>
+        <mxCell id="label-action-execution" value="same queue key&lt;br&gt;(or deterministic hash)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="2400" y="1810" width="250" height="58" as="geometry"/></mxCell>
+        <mxCell id="mult-job-exec" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="2880" y="1310" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="mult-exec-job" value="0..1" style="text;html=1;strokeColor=none;fillColor=#F8FAFC;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2C3E50;" vertex="1" parent="logical-boundary"><mxGeometry x="2880" y="2038" width="46" height="22" as="geometry"/></mxCell>
+
+        <!-- Cross-boundary explanatory dependencies -->
+        <mxCell id="dep-documents-logical" value="collection_name chooses JSON subtype" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;strokeColor=#5D6D7E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#2C3E50;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" edge="1" parent="1" source="table-documents" target="logical-discriminator-note">
+          <mxGeometry x="0" y="-12" relative="1" as="geometry"><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="dep-hec-envelope" value="envelope_json contains" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;strokeColor=#B03A2E;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#78281F;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.4;entryX=0;entryY=0.55;" edge="1" parent="1" source="table-hec-events" target="entity-hec-envelope">
+          <mxGeometry x="0" y="-12" relative="1" as="geometry"><Array as="points"><mxPoint x="2200" y="2480"/><mxPoint x="2200" y="1944"/></Array><mxPoint as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- PSR / SCALABILITY LENS -->
+        <mxCell id="psr-boundary" value="&lt;b&gt;PSR SCALABILITY LENS — WHAT THIS MODEL MAKES EXPENSIVE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#B03A2E;strokeWidth=3;align=left;verticalAlign=top;spacingTop=16;spacingLeft=20;fontFamily=Helvetica;fontSize=19;fontColor=#78281F;container=1;collapsible=0;recursiveResize=0;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="3160" width="5840" height="560" as="geometry"/>
+        </mxCell>
+        <mxCell id="psr-tenant" value="&lt;b&gt;1 • No tenant boundary&lt;/b&gt;&lt;br&gt;No table, PK, or index contains tenant_id. A multi-tenant service would share collection names, keys, locks, histories, and query work." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEDEC;strokeColor=#B03A2E;strokeWidth=2;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=14;fontColor=#78281F;" vertex="1" parent="psr-boundary"><mxGeometry x="90" y="100" width="1040" height="190" as="geometry"/></mxCell>
+        <mxCell id="psr-episode" value="&lt;b&gt;2 • Episode rebuilt at read time&lt;/b&gt;&lt;br&gt;All system/user rows and grouped HEC history are scanned, JSON-decoded, window-ranked and sorted twice before LIMIT. This is the direct all-time 504 path." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEDEC;strokeColor=#B03A2E;strokeWidth=2;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=14;fontColor=#78281F;" vertex="1" parent="psr-boundary"><mxGeometry x="1210" y="100" width="1040" height="190" as="geometry"/></mxCell>
+        <mxCell id="psr-growth" value="&lt;b&gt;3 • Histories grow without lifecycle policy&lt;/b&gt;&lt;br&gt;HEC snapshots, tracked inputs, request audits, ACKs, runtime errors and EventiQ runs lack TTL/retention. Search results persist until explicit DELETE." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEDEC;strokeColor=#B03A2E;strokeWidth=2;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=14;fontColor=#78281F;" vertex="1" parent="psr-boundary"><mxGeometry x="2330" y="100" width="1040" height="190" as="geometry"/></mxCell>
+        <mxCell id="psr-json" value="&lt;b&gt;4 • Core joins are soft JSON joins&lt;/b&gt;&lt;br&gt;Policy, event, episode, webhook and queue links are neither validated nor indexed as relational keys. Orphans and repeated snapshots are structurally permitted." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEDEC;strokeColor=#B03A2E;strokeWidth=2;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=14;fontColor=#78281F;" vertex="1" parent="psr-boundary"><mxGeometry x="3450" y="100" width="1040" height="190" as="geometry"/></mxCell>
+        <mxCell id="psr-isolation" value="&lt;b&gt;5 • One SQLite file mixes workloads&lt;/b&gt;&lt;br&gt;Configuration, current state, histories, audits and large search results share WAL, connection-per-operation access, and one process-wide writer lock." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEDEC;strokeColor=#B03A2E;strokeWidth=2;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=14;fontColor=#78281F;" vertex="1" parent="psr-boundary"><mxGeometry x="4570" y="100" width="1180" height="190" as="geometry"/></mxCell>
+        <mxCell id="legend" value="&lt;b&gt;Legend:&lt;/b&gt; orange-bordered = physical SQLite table • blue header = logical JSON document subtype • red border = PSR hot path / growth risk • dashed association = application/JSON relationship, not a database foreign key • multiplicities describe intended logical cardinality and may be violated by stored data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F6F7;strokeColor=#7F8C8D;strokeWidth=2;align=center;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=14;fontColor=#34495E;" vertex="1" parent="psr-boundary"><mxGeometry x="90" y="340" width="5660" height="130" as="geometry"/></mxCell>
+
+        <mxCell id="footer" value="Scope note: NATS JetStream (itsi_indexes / itsi_tracked_alerts, one-hour file retention) is transport state outside SQLite and is intentionally contextual rather than modeled as a relational entity. The immutable .spl library contains executable behavior, not writable application data." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=13;fontColor=#5D6D7E;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="200" y="3730" width="5600" height="45" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

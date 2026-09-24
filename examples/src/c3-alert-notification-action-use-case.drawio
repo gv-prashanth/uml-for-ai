@@ -1,0 +1,196 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="c3-alert-notification-action-current" name="Current Use Case Diagram">
+    <mxGraphModel dx="2533" dy="2133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3800" pageHeight="3200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="background" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;" value="" vertex="1">
+          <mxGeometry x="20" y="20" width="3760" height="3160" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=32;fontStyle=1;fontColor=#07182D;" value="C3 Alert, Notification &amp;amp; Action Framework — Current UML Use Case Diagram" vertex="1">
+          <mxGeometry x="60" y="38" width="3680" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#40566A;" value="Black-box view reconciled against current source and published architecture. Optional behavior is shown with guarded UML extensions; implementation order is stated in a note." vertex="1">
+          <mxGeometry x="60" y="91" width="3680" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-actor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#123B63;" value="Actor-facing goal" vertex="1">
+          <mxGeometry x="720" y="158" width="250" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-internal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;" value="Deterministic internal behavior" vertex="1">
+          <mxGeometry x="990" y="158" width="310" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-ai" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2F8;strokeColor=#B00058;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#7A154A;" value="Conditional AI-assisted behavior" vertex="1">
+          <mxGeometry x="1320" y="158" width="310" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-gated" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7EA;strokeColor=#F68B1F;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#8A4A00;" value="Optional / gated context" vertex="1">
+          <mxGeometry x="1650" y="158" width="270" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-current" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F6F8;strokeColor=#7E94A5;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#40566A;" value="CURRENT IMPLEMENTATION" vertex="1">
+          <mxGeometry x="2670" y="158" width="400" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c3-boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8FBFD;strokeColor=#075B88;strokeWidth=2.5;align=left;verticalAlign=top;spacingTop=18;spacingLeft=20;spacingRight=12;fontFamily=Helvetica;fontSize=20;fontStyle=1;fontColor=#075B88;shadow=0;container=1;collapsible=0;recursiveResize=0;" value="C3 UNIFIED NOTIFICATIONS &amp;amp; ACTIONS SUBSYSTEM" vertex="1">
+          <mxGeometry x="650" y="260" width="2500" height="2700" as="geometry" />
+        </mxCell>
+        <mxCell id="external-column-header" parent="c3-boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;" value="ACTOR-FACING GOALS" vertex="1">
+          <mxGeometry x="150" y="65" width="500" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="internal-column-header" parent="c3-boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;" value="INTERNAL / DOWNSTREAM BEHAVIOR" vertex="1">
+          <mxGeometry x="1510" y="65" width="650" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc-submit-alert" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Submit Alert&lt;br&gt;Lifecycle Update" vertex="1">
+          <mxGeometry x="280" y="150" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-review-notifications" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Review&lt;br&gt;Notifications" vertex="1">
+          <mxGeometry x="280" y="480" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-manage-notification-state" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Manage Personal&lt;br&gt;Notification State" vertex="1">
+          <mxGeometry x="280" y="810" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-review-actions" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Review Correlated&lt;br&gt;Actions" vertex="1">
+          <mxGeometry x="280" y="1140" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-manage-action" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Manage Action&lt;br&gt;Response" vertex="1">
+          <mxGeometry x="280" y="1470" width="240" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc-maintain-notification" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Maintain Latest&lt;br&gt;Notification" vertex="1">
+          <mxGeometry x="1660" y="150" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-classify-notification" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFF2F8;strokeColor=#B00058;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#7A154A;shadow=0;spacing=10;" value="Classify Notification&lt;br&gt;Metadata" vertex="1">
+          <mxGeometry x="1660" y="480" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-enrich-topology" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFF7EA;strokeColor=#F68B1F;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#8A4A00;shadow=0;spacing=10;" value="Enrich Topology&lt;br&gt;Context" vertex="1">
+          <mxGeometry x="1660" y="810" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-evaluate-membership" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Evaluate Action&lt;br&gt;Membership" vertex="1">
+          <mxGeometry x="1660" y="1140" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-apply-operation" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFF4E8;strokeColor=#E56B00;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#8A3F00;shadow=0;spacing=10;" value="Apply Action&lt;br&gt;Operation" vertex="1">
+          <mxGeometry x="1660" y="1470" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-generate-narrative" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFF2F8;strokeColor=#B00058;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#7A154A;shadow=0;spacing=10;" value="Generate Action&lt;br&gt;Narrative" vertex="1">
+          <mxGeometry x="1660" y="1800" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-serve-topology" parent="c3-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Serve Scoped&lt;br&gt;Device Alerts" vertex="1">
+          <mxGeometry x="1660" y="2130" width="240" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note-runtime-order" parent="c3-boundary" style="shape=note;whiteSpace=wrap;html=1;size=20;fillColor=#F2F8FC;strokeColor=#5A93B8;strokeWidth=1.5;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=13;fontColor=#264F69;" value="&lt;b&gt;Runtime order — not a UML dependency chain&lt;/b&gt;&lt;br&gt;Normalize → identity/freshness dedupe → optional Notification classifier → persist Notification + optional topology lookup → exact-rule correlation → conditional Incident classifier → persist Action/Incident + Notification links.&lt;br&gt;&lt;b&gt;Access:&lt;/b&gt; every user/API read and write is tenant- and RBAC-scoped; Action visibility requires all linked Notifications to be visible." vertex="1">
+          <mxGeometry x="280" y="2390" width="1450" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="note-current-limits" parent="c3-boundary" style="shape=note;whiteSpace=wrap;html=1;size=20;fillColor=#F8F7FA;strokeColor=#7E6B8E;strokeWidth=1.5;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=12;fontColor=#4D4058;" value="&lt;b&gt;Current boundary&lt;/b&gt;&lt;br&gt;Action is the UI term for a persisted Incident plus Notification links. Rules are static, exact and code-deployed; optional topology contributes one exact group ID, not graph RCA. AI adds metadata/narrative and never chooses membership, severity or status. CREATE / MERGE / UPDATE / RESOLVE maintain one Incident and its links. No user-authored rules, causal grouping, Action-to-Action merge/split/recluster, or final enriched Action event exists in the reviewed implementation." vertex="1">
+          <mxGeometry x="1770" y="2390" width="620" height="205" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-submit-maintain" edge="1" parent="c3-boundary" source="uc-submit-alert" target="uc-maintain-notification" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#526A7A;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#34495E;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" value="«include»">
+          <mxGeometry relative="1" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-classify-maintain" edge="1" parent="c3-boundary" source="uc-classify-notification" target="uc-maintain-notification" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#B00058;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#7A154A;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" value="«extend»">
+          <mxGeometry relative="1" x="38" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-classify" parent="c3-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#7A154A;" value="[tenant allowlisted]" vertex="1">
+          <mxGeometry x="1830" y="395" width="220" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-topology-membership" edge="1" parent="c3-boundary" source="uc-enrich-topology" target="uc-evaluate-membership" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#D47700;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#8A4A00;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" value="«extend»">
+          <mxGeometry relative="1" x="38" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-topology" parent="c3-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#8A4A00;" value="[topology enabled + mapped]" vertex="1">
+          <mxGeometry x="1810" y="1045" width="280" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-membership-submit" edge="1" parent="c3-boundary" source="uc-evaluate-membership" target="uc-submit-alert" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#087F8C;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" value="«extend»">
+          <mxGeometry relative="1" y="-15" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-action-evaluation" parent="c3-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#155B60;" value="[change emitted + Action evaluation enabled]" vertex="1">
+          <mxGeometry x="790" y="600" width="320" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-apply-membership" edge="1" parent="c3-boundary" source="uc-apply-operation" target="uc-evaluate-membership" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#D55F00;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#8A3F00;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" value="«extend»">
+          <mxGeometry relative="1" x="38" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-operation" parent="c3-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#8A3F00;" value="[operation planned]" vertex="1">
+          <mxGeometry x="1845" y="1375" width="220" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-narrative-apply" edge="1" parent="c3-boundary" source="uc-generate-narrative" target="uc-apply-operation" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#B00058;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#7A154A;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" value="«extend»">
+          <mxGeometry relative="1" x="38" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-narrative" parent="c3-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#7A154A;" value="[CREATE / MERGE or material UPDATE]" vertex="1">
+          <mxGeometry x="1740" y="1705" width="360" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-personal-review" edge="1" parent="c3-boundary" source="uc-manage-notification-state" target="uc-review-notifications" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#0A6ED1;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#123B63;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" value="«extend»">
+          <mxGeometry relative="1" x="38" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-personal-state" parent="c3-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#123B63;" value="[read / snooze / clear]" vertex="1">
+          <mxGeometry x="430" y="725" width="240" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-manage-review-action" edge="1" parent="c3-boundary" source="uc-manage-action" target="uc-review-actions" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#0A6ED1;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#123B63;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" value="«extend»">
+          <mxGeometry relative="1" x="38" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-action-response" parent="c3-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#123B63;" value="[assign / unassign / dismiss / resolve]" vertex="1">
+          <mxGeometry x="325" y="1375" width="380" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor-product" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="160" y="380" width="95" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-product-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Cisco Product&lt;br&gt;Controller" vertex="1">
+          <mxGeometry x="45" y="580" width="325" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-operator" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="150" y="1050" width="95" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-operator-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="C3 Operator" vertex="1">
+          <mxGeometry x="35" y="1250" width="325" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-responder" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="350" y="1740" width="95" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-responder-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Authorized&lt;br&gt;Responder" vertex="1">
+          <mxGeometry x="235" y="1940" width="325" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-azure" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#8A4A72;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="3400" y="1170" width="95" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-azure-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#7A154A;" value="Azure OpenAI" vertex="1">
+          <mxGeometry x="3270" y="1370" width="355" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-topology-experience" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry x="3400" y="2380" width="95" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-topology-experience-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="C3 Topology&lt;br&gt;Experience" vertex="1">
+          <mxGeometry x="3270" y="2580" width="355" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assoc-product-submit" edge="1" parent="1" source="actor-product" target="uc-submit-alert" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-operator-notifications" edge="1" parent="1" source="actor-operator" target="uc-review-notifications" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.22;entryX=0;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-operator-personal" edge="1" parent="1" source="actor-operator" target="uc-manage-notification-state" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-operator-actions" edge="1" parent="1" source="actor-operator" target="uc-review-actions" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.78;entryX=0;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-responder-manage" edge="1" parent="1" source="actor-responder" target="uc-manage-action" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="generalization-responder-operator" edge="1" parent="1" source="actor-responder" target="actor-operator" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=block;endFill=0;startArrow=none;exitX=0.25;exitY=0;entryX=0.75;entryY=1;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-azure-notification" edge="1" parent="1" source="uc-classify-notification" target="actor-azure" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#9A4773;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.2;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-azure-narrative" edge="1" parent="1" source="uc-generate-narrative" target="actor-azure" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#9A4773;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.8;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-topology-scope" edge="1" parent="1" source="uc-serve-topology" target="actor-topology-experience" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

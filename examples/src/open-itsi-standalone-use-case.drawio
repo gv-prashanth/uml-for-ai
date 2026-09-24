@@ -1,0 +1,193 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="open-itsi-standalone-use-cases" name="Current Use Case Diagram">
+    <mxGraphModel dx="5052" dy="2796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3600" pageHeight="2500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="background" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;shadow=0;" value="" vertex="1">
+          <mxGeometry height="2460" width="3560" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=32;fontStyle=1;fontColor=#07182D;" value="Open-ITSI Standalone — Current UML Use Case Diagram" vertex="1">
+          <mxGeometry height="48" width="3480" x="60" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram-subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=16;fontColor=#40566A;" value="Responsibility-boundary view: every provider Alert is normalized by Data Integrations; only Open ITSI Kafka enters through openitsi.alerts.v1; every accepted result crosses openitsi.notables.v1 before correlation." vertex="1">
+          <mxGeometry height="34" width="3480" x="60" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-actor-goal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#123B63;" value="Actor-facing goal" vertex="1">
+          <mxGeometry height="48" width="250" x="660" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-host" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;" value="Standalone-owned mechanics" vertex="1">
+          <mxGeometry height="48" width="310" x="930" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-package" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3EEFF;strokeColor=#6F42C1;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#4D2C91;" value="External package semantic seam" vertex="1">
+          <mxGeometry height="48" width="320" x="1260" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-current" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F6F8;strokeColor=#7E94A5;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#40566A;" value="CURRENT IMPLEMENTATION" vertex="1">
+          <mxGeometry height="48" width="400" x="2530" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="standalone-boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8FBFD;strokeColor=#075B88;strokeWidth=2.5;align=left;verticalAlign=top;spacingTop=18;spacingLeft=20;spacingRight=12;fontFamily=Helvetica;fontSize=20;fontStyle=1;fontColor=#075B88;shadow=0;container=1;collapsible=0;recursiveResize=0;" value="ITSI STANDALONE HTTP / MESSAGE BROKER PROCESS" vertex="1">
+          <mxGeometry height="1940" width="2460" x="520" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary-subtitle" parent="standalone-boundary" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=14;fontColor=#40566A;" value="Host, compatibility layer, and data plane around an externally supplied, immutable package — not a local rewrite of Event Analytics." vertex="1">
+          <mxGeometry height="36" width="2380" x="24" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="external-column-header" parent="standalone-boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;" value="ACTOR-FACING GOALS" vertex="1">
+          <mxGeometry height="55" width="500" x="170" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="internal-column-header" parent="standalone-boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;" value="STANDALONE-OWNED / DOWNSTREAM MECHANICS" vertex="1">
+          <mxGeometry height="55" width="680" x="1420" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-process-events" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Submit Provider&lt;br&gt;Alert" vertex="1">
+          <mxGeometry height="160" width="240" x="300" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-manage-policies" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Manage Policies /&lt;br&gt;Alert Connections" vertex="1">
+          <mxGeometry height="160" width="240" x="300" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-eventiq" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Request EventiQ&lt;br&gt;Analysis" vertex="1">
+          <mxGeometry height="160" width="240" x="300" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-explore-episodes" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Generate &amp;amp; Return Episodes" vertex="1">
+          <mxGeometry height="160" width="240" x="300" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-operate" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF5FF;strokeColor=#0A6ED1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#123B63;shadow=0;spacing=10;" value="Operate Standalone" vertex="1">
+          <mxGeometry height="160" width="240" x="300" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-admit-events" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Data Integrations:&lt;br&gt;Normalize + Publish&lt;br&gt;Canonical Notable" vertex="1">
+          <mxGeometry height="160" width="240" x="1600" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-splunk-contracts" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Provide Splunk-Compatible&lt;br&gt;Contracts" vertex="1">
+          <mxGeometry height="160" width="240" x="1600" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-delegate-semantics" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#F3EEFF;strokeColor=#6F42C1;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#4D2C91;shadow=0;spacing=10;" value="Correlation: Delegate&lt;br&gt;Event Analytics Decisions" vertex="1">
+          <mxGeometry height="160" width="240" x="1600" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-persist-outputs" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Persist Package&lt;br&gt;Outputs" vertex="1">
+          <mxGeometry height="160" width="240" x="1600" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-serve-projections" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Serve Tenant&lt;br&gt;Projections" vertex="1">
+          <mxGeometry height="160" width="240" x="1600" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-supervise-runtime" parent="standalone-boundary" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EAF9F8;strokeColor=#087F8C;strokeWidth=2.5;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#155B60;shadow=0;spacing=10;" value="Supervise Package +&lt;br&gt;Source Runtime" vertex="1">
+          <mxGeometry height="160" width="240" x="1600" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="note-responsibility" parent="standalone-boundary" style="shape=note;whiteSpace=wrap;html=1;size=20;fillColor=#F2F8FC;strokeColor=#5A93B8;strokeWidth=1.5;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=13;fontColor=#264F69;" value="&lt;b&gt;Standalone owns host mechanics:&lt;/b&gt; trusted tenant/source binding; Alert revision, endpoint, and source-generation lifecycle; package-derived declarative JSON normalization; DI receipt + Notable outbox; openitsi.notables.v1 publication and independent correlation admission; selected NATS/RTS delivery; quota-bounded External Kafka workers; PostgreSQL durability, health, and evidence. POST /api/internal/notable-events remains the explicit direct-Core compatibility exception." vertex="1">
+          <mxGeometry height="135" width="1120" x="70" y="1760" as="geometry" />
+        </mxCell>
+        <mxCell id="note-not-owned" parent="standalone-boundary" style="shape=note;whiteSpace=wrap;html=1;size=20;fillColor=#F8F7FA;strokeColor=#6F42C1;strokeWidth=1.5;align=left;verticalAlign=middle;spacing=14;fontFamily=Helvetica;fontSize=13;fontColor=#4D2C91;" value="&lt;b&gt;Standalone does not invent:&lt;/b&gt; Alert provider/templates/required fields; NEAP validation/ranking; matching/grouping; split/break or Episode lifecycle; action activation; EventiQ Detect; Jaccard Similar Episodes; or package action-webhook semantics. It executes no SPL search and performs no HTTP polling; unsupported paths fail closed." vertex="1">
+          <mxGeometry height="135" width="1140" x="1250" y="1760" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-process-admit" edge="1" parent="standalone-boundary" source="uc-process-events" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#087F8C;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.35;entryX=0;entryY=0.35;" target="uc-admit-events" value="«include» Data Integrations">
+          <mxGeometry relative="1" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-process-delegate" edge="1" parent="standalone-boundary" source="uc-admit-events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6F42C1;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#4D2C91;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" target="uc-delegate-semantics" value="«include» via openitsi.notables.v1">
+          <mxGeometry relative="1" x="0.1" y="-16" as="geometry">
+            <Array as="points">
+              <mxPoint x="2010" y="280" />
+              <mxPoint x="2010" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-manage-delegate" edge="1" parent="standalone-boundary" source="uc-manage-policies" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6F42C1;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#4D2C91;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.42;" target="uc-delegate-semantics" value="«include»">
+          <mxGeometry relative="1" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-eventiq-delegate" edge="1" parent="standalone-boundary" source="uc-eventiq" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6F42C1;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#4D2C91;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.68;" target="uc-delegate-semantics" value="«include»">
+          <mxGeometry relative="1" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-explore-projections" edge="1" parent="standalone-boundary" source="uc-explore-episodes" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#087F8C;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="uc-serve-projections" value="«include»">
+          <mxGeometry relative="1" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-delegate-explore" edge="1" parent="standalone-boundary" source="uc-delegate-semantics" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6F42C1;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#4D2C91;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.92;entryX=1;entryY=0.18;" target="uc-explore-episodes" value="«extend»">
+          <mxGeometry relative="1" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-similarity" parent="standalone-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#4D2C91;" value="[similarity requested]" vertex="1">
+          <mxGeometry height="34" width="230" x="915" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-operate-supervise" edge="1" parent="standalone-boundary" source="uc-operate" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#087F8C;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="uc-supervise-runtime" value="«include»">
+          <mxGeometry relative="1" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-delegate-contracts" edge="1" parent="standalone-boundary" source="uc-delegate-semantics" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#087F8C;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="uc-splunk-contracts" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-persist-delegate" edge="1" parent="standalone-boundary" source="uc-persist-outputs" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#087F8C;strokeWidth=2;fontFamily=Helvetica;fontSize=13;fontColor=#155B60;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="uc-delegate-semantics" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="guard-package-output" parent="standalone-boundary" style="text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#155B60;" value="[package emits KV / HEC]" vertex="1">
+          <mxGeometry height="34" width="250" x="1845" y="945" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-event-producer" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="145" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-event-producer-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Alert Source&lt;br&gt;&lt;span style=&quot;font-size: 11px; font-weight: 400;&quot;&gt;API · OPEN ITSI KAFKA · WEBHOOK&lt;br&gt;EXTERNAL KAFKA&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="325" x="30" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-consumer" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="145" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-consumer-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Open-ITSI Admin&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;UI · API · MCP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="74" width="345" x="20" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-operator" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="145" y="1810" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-operator-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Platform Operator" vertex="1">
+          <mxGeometry height="62" width="325" x="30" y="2010" as="geometry" />
+        </mxCell>
+        <mxCell id="package-status" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3EEFF;strokeColor=#6F42C1;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontStyle=1;fontColor=#4D2C91;" value="EXTERNAL · STOCK / UNCHANGED&lt;br&gt;SEMANTIC AUTHORITY" vertex="1">
+          <mxGeometry height="78" width="410" x="3130" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-package" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#6F42C1;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="3288" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-package-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#4D2C91;" value="Packaged ITSI .spl&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;externally supplied · immutable · config read + runtime executed locally&lt;/font&gt;" vertex="1">
+          <mxGeometry height="74" width="430" x="3120" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="package-decision-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=20;fillColor=#F8F7FA;strokeColor=#6F42C1;strokeWidth=1.5;align=left;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=12;fontColor=#4D2C91;" value="&lt;b&gt;Package-owned meaning&lt;/b&gt;&lt;br&gt;Alert provider catalog + declarative mapping definitions · NEAP validation/ranking · matching/grouping · split/break/lifecycle · action activation · EventiQ Detect · Jaccard Similar Episodes · outbound action-webhook semantics&lt;br&gt;&lt;br&gt;&lt;b&gt;Actor meaning:&lt;/b&gt; external authority and ownership—not a remote service. Standalone reads reviewed config and supervises executable package paths locally." vertex="1">
+          <mxGeometry height="205" width="470" x="3090" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-producer-process" edge="1" parent="1" source="actor-event-producer" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="uc-process-events" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DIkv7UZSLrexWpebNV0d-3" connectable="0" parent="assoc-producer-process" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;lt;&amp;lt; Primary &amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3655" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-consumer-policies" edge="1" parent="1" source="actor-consumer" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.18;entryX=0;entryY=0.5;" target="uc-manage-policies" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-consumer-eventiq" edge="1" parent="1" source="actor-consumer" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.4;entryX=0;entryY=0.5;" target="uc-eventiq" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-consumer-episodes" edge="1" parent="1" source="DIkv7UZSLrexWpebNV0d-1" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;entryX=0;entryY=0.5;" target="uc-explore-episodes" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DIkv7UZSLrexWpebNV0d-4" connectable="0" parent="assoc-consumer-episodes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;lt;&amp;lt; Primary &amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.4147" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-operator-operate" edge="1" parent="1" source="actor-operator" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6B7F8C;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="uc-operate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-package-contracts" edge="1" parent="1" source="actor-package" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6F42C1;strokeWidth=2;endArrow=none;startArrow=none;exitX=0;exitY=0.28;entryX=1;entryY=0.5;" target="uc-splunk-contracts" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-package-delegation" edge="1" parent="1" source="actor-package" style="edgeStyle=none;rounded=0;orthogonalLoop=0;curved=0;html=1;strokeColor=#6F42C1;strokeWidth=2;endArrow=none;startArrow=none;exitX=0;exitY=0.72;entryX=1;entryY=0.5;" target="uc-delegate-semantics" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evidence-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F6F8;strokeColor=#A4B2BD;strokeWidth=1.5;align=left;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=12;fontColor=#40566A;" value="&lt;b&gt;Evidence snapshot&lt;/b&gt; · current repository and pinned ITSI 5.0.0 build 104548 · re-audited 24 September 2026 · API, webhook, and External Kafka call DI directly · only Open ITSI Kafka uses openitsi.alerts.v1 · DI publishes openitsi.notables.v1 · mappings come from hash-pinned extracted package config · no HTTP polling, Search, Search time, Schedule, or SPL search execution." vertex="1">
+          <mxGeometry height="115" width="2460" x="520" y="2260" as="geometry" />
+        </mxCell>
+        <mxCell id="notation-note" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#526A7A;" value="Solid line = actor association · dashed open arrow = UML include / extend · every ellipse inside the boundary is a real boundary child · databases and message brokers are implementation mechanisms, not actors." vertex="1">
+          <mxGeometry height="42" width="2460" x="520" y="2390" as="geometry" />
+        </mxCell>
+        <mxCell id="DIkv7UZSLrexWpebNV0d-1" parent="1" style="shape=umlActor;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#526A7A;fillColor=#FFFFFF;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="190" width="95" x="140" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="DIkv7UZSLrexWpebNV0d-2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=15;fontStyle=1;fontColor=#34495E;" value="Incident Consumer&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;UI · API · MCP · &lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;u&gt;KAFKA&lt;/u&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="74" width="345" x="15" y="1480" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

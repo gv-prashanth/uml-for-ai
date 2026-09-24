@@ -133,7 +133,7 @@
         <mxCell id="existing-note" parent="sok-boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F6F3;strokeColor=#0B7A75;strokeWidth=2;align=center;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=13;fontColor=#0B5345;shadow=0;dashed=1;dashPattern=7 5;" value="Components are grouped by their primary implementation file. Existing SOK details outside the ITSI path are intentionally omitted." vertex="1">
           <mxGeometry height="190" width="1720" x="150" y="2040" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-boundary" parent="sok-boundary" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2.5;align=left;verticalAlign=top;spacingTop=16;spacingLeft=18;spacingRight=10;fontFamily=Helvetica;fontSize=17;fontColor=#873600;shadow=0;container=1;collapsible=0;recursiveResize=0;" value="«subsystem»&lt;br&gt;&lt;b&gt;ITSI App Framework Extension&lt;/b&gt;&lt;br&gt;FOUR COHESIVE RESPONSIBILITIES • THREE FROZEN DESIGN INTERFACES" vertex="1">
+        <mxCell id="itsi-boundary" parent="sok-boundary" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2.5;align=left;verticalAlign=top;spacingTop=16;spacingLeft=18;spacingRight=10;fontFamily=Helvetica;fontSize=17;fontColor=#873600;shadow=0;container=1;collapsible=0;recursiveResize=0;" value="«subsystem»&lt;br&gt;&lt;b&gt;ITSI App Framework Extension&lt;/b&gt;&lt;br&gt;FOUR COHESIVE RESPONSIBILITIES • NAMED NATIVE PROVIDED/REQUIRED INTERFACES" vertex="1">
           <mxGeometry height="2480" width="1450" x="2050" y="300" as="geometry" />
         </mxCell>
         <mxCell id="itsi-c3-stager" parent="itsi-boundary" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=24;spacingRight=24;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=2.5;fontFamily=Helvetica;fontSize=14;fontColor=#873600;container=1;collapsible=0;recursiveResize=0;shadow=0;" value="«component»&lt;br&gt;&lt;b&gt;C3 ITSI Role Bundle Stager&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Does:&lt;/b&gt; Stages index-tier or search-tier apps with exact-digest provenance for bundle push.&lt;br&gt;&lt;br&gt;&lt;b&gt;Key File:&lt;/b&gt; pkg/splunk/enterprise/itsi.go" vertex="1">
@@ -184,58 +184,58 @@
         <mxCell id="shc-coordinator-glyph-bottom" connectable="0" parent="itsi-shc-coordinator" style="shape=rectangle;html=1;fillColor=#FFE1C2;strokeColor=#C25700;strokeWidth=1.5;shadow=0;connectable=0;" value="" vertex="1">
           <mxGeometry height="10" width="12" x="865" y="47" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-c3-interface-socket" parent="itsi-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="203" y="343" as="geometry" />
-        </mxCell>
-        <mxCell id="itsi-c3-interface-mask" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#FFF8F1;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="220" y="340" as="geometry" />
-        </mxCell>
-        <mxCell id="itsi-c3-interface-ball" parent="itsi-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="236" y="348" as="geometry" />
+        <mxCell id="itsi-c3-interface-socket" parent="itsi-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;flipH=1;inset=3;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="226" y="343" as="geometry" />
         </mxCell>
         <mxCell id="itsi-c3-interface-provider-stem" connectable="0" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#C25700;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="260" y="359" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-c3-interface-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;IITSIClusterBundleStage&lt;/b&gt;" vertex="1">
-          <mxGeometry height="44" width="220" x="-5" y="288" as="geometry" />
+        <mxCell id="itsi-c3-interface-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;IITSIClusterBundleStage&lt;/b&gt;&lt;br&gt;stageItsiClusterBundle" vertex="1">
+          <mxGeometry height="56" width="220" x="-5" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-standalone-interface-socket" parent="itsi-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="203" y="1173" as="geometry" />
-        </mxCell>
-        <mxCell id="itsi-standalone-interface-mask" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#FFF8F1;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="220" y="1170" as="geometry" />
-        </mxCell>
-        <mxCell id="itsi-standalone-interface-ball" parent="itsi-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="236" y="1178" as="geometry" />
+        <mxCell id="itsi-standalone-interface-socket" parent="itsi-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;flipH=1;inset=3;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="226" y="1173" as="geometry" />
         </mxCell>
         <mxCell id="itsi-standalone-interface-provider-stem" connectable="0" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#C25700;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="260" y="1189" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-standalone-interface-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;IITSIStandaloneInstall&lt;/b&gt;" vertex="1">
-          <mxGeometry height="44" width="220" x="-5" y="1213" as="geometry" />
+        <mxCell id="itsi-standalone-interface-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;IITSIStandaloneInstall&lt;/b&gt;&lt;br&gt;handleItsiAppInstall" vertex="1">
+          <mxGeometry height="56" width="220" x="-5" y="1208" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-shc-interface-socket" parent="itsi-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="203" y="1579" as="geometry" />
-        </mxCell>
-        <mxCell id="itsi-shc-interface-mask" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#FFF8F1;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="220" y="1576" as="geometry" />
-        </mxCell>
-        <mxCell id="itsi-shc-interface-ball" parent="itsi-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="236" y="1584" as="geometry" />
+        <mxCell id="itsi-shc-interface-socket" parent="itsi-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;flipH=1;inset=3;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="226" y="1579" as="geometry" />
         </mxCell>
         <mxCell id="itsi-shc-interface-provider-stem" connectable="0" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#C25700;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="260" y="1595" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-shc-interface-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;IITSISHCPostInstall&lt;/b&gt;" vertex="1">
-          <mxGeometry height="44" width="220" x="-5" y="1619" as="geometry" />
+        <mxCell id="itsi-shc-interface-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;IITSISHCPostInstall&lt;/b&gt;&lt;br&gt;runItsiSHCPostInstall" vertex="1">
+          <mxGeometry height="56" width="220" x="-5" y="1614" as="geometry" />
         </mxCell>
-        <mxCell id="itsi-note" parent="itsi-boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;align=center;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=13;fontColor=#873600;shadow=0;dashed=1;dashPattern=7 5;" value="&lt;b&gt;Design interface → current call seam&lt;/b&gt;&lt;br&gt;IITSIClusterBundleStage → stageItsiClusterBundle • IITSIStandaloneInstall → handleItsiAppInstall • IITSISHCPostInstall → runItsiSHCPostInstall&lt;br&gt;All four components compile into the existing SOK controller; no new pod, sidecar, service, or image is introduced." vertex="1">
+        <mxCell id="itsi-note" parent="itsi-boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;align=center;verticalAlign=middle;spacing=12;fontFamily=Helvetica;fontSize=13;fontColor=#873600;shadow=0;dashed=1;dashPattern=7 5;" value="&lt;b&gt;Design interface → current call seam&lt;/b&gt;&lt;br&gt;IITSIClusterBundleStage → stageItsiClusterBundle • IITSIStandaloneInstall → handleItsiAppInstall • IITSISHCPostInstall → runItsiSHCPostInstall&lt;br&gt;Internal method assemblies are labeled with their exact code callables. All four components compile into the existing SOK controller; no new pod, sidecar, service, or image is introduced." vertex="1">
           <mxGeometry height="190" width="920" x="280" y="2070" as="geometry" />
         </mxCell>
-        <mxCell id="dep-c3-inspector" edge="1" parent="itsi-boundary" source="itsi-c3-stager" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#873600;labelBackgroundColor=#FFF8F1;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.35;exitY=1;entryX=0.35;entryY=0;" target="itsi-aggregate-resolver" value="«use» inspect + select role">
+        <mxCell id="itsi-inspection-c3-interface" parent="itsi-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;flipH=1;rotation=90;inset=3;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="585" y="586" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-inspection-c3-provider-stem" connectable="0" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#C25700;strokeColor=none;connectable=0;" value="" vertex="1">
+          <mxGeometry height="20" width="2" x="601" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-inspection-c3-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=10;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;inspectItsiBundle · getItsiDeploymentRole · getItsiComponentsForRole&lt;/b&gt;" vertex="1">
+          <mxGeometry height="56" width="500" x="625" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="dep-c3-inspector" edge="1" parent="itsi-boundary" source="itsi-c3-stager" style="edgeStyle=none;rounded=0;orthogonalLoop=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=0.35;exitY=1;entryX=0.5;entryY=0;" target="itsi-inspection-c3-interface" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-standalone-inspector" edge="1" parent="itsi-boundary" source="itsi-standalone-installer" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#873600;labelBackgroundColor=#FFF8F1;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0.65;exitY=0;entryX=0.65;entryY=1;" target="itsi-aggregate-resolver" value="«use» inspect + select role">
+        <mxCell id="itsi-inspection-standalone-interface" parent="itsi-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;flipH=1;rotation=270;inset=3;fillColor=#FFF8F1;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="861" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-inspection-standalone-provider-stem" connectable="0" parent="itsi-boundary" style="shape=rectangle;html=1;fillColor=#C25700;strokeColor=none;connectable=0;" value="" vertex="1">
+          <mxGeometry height="20" width="2" x="877" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-inspection-standalone-label" parent="itsi-boundary" style="text;html=1;strokeColor=none;fillColor=#FFF8F1;align=right;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=10;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;inspectItsiBundle · getItsiDeploymentRole&lt;/b&gt;" vertex="1">
+          <mxGeometry height="56" width="360" x="480" y="956" as="geometry" />
+        </mxCell>
+        <mxCell id="dep-standalone-inspector" edge="1" parent="itsi-boundary" source="itsi-standalone-installer" style="edgeStyle=none;rounded=0;orthogonalLoop=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=0.65;exitY=0;entryX=0.5;entryY=1;" target="itsi-inspection-standalone-interface" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="port-kubernetes" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#FFFFFF;strokeColor=#7F8C8D;strokeWidth=2;" value="" vertex="1">
@@ -285,25 +285,19 @@
         <mxCell id="controllerclient-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#7F8C8D;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="15" y="469" as="geometry" />
         </mxCell>
-        <mxCell id="controllerclient-ball" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#7F8C8D;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="106" y="458" as="geometry" />
-        </mxCell>
-        <mxCell id="controllerclient-enterprise-socket" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#7F8C8D;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="72" y="453" as="geometry" />
-        </mxCell>
-        <mxCell id="controllerclient-enterprise-mask" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#F3FBF9;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="84" y="450" as="geometry" />
+        <mxCell id="controllerclient-enterprise-socket" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;inset=3;fillColor=#F3FBF9;strokeColor=#7F8C8D;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="96" y="453" as="geometry" />
         </mxCell>
         <mxCell id="controllerclient-enterprise-required-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#7F8C8D;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="130" y="469" as="geometry" />
         </mxCell>
         <mxCell id="assembly-controller-client-enterprise" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#7F8C8D;strokeColor=none;connectable=0;" value="" vertex="1">
-          <mxGeometry height="2" width="40" x="30" y="469" as="geometry" />
+          <mxGeometry height="2" width="66" x="30" y="469" as="geometry" />
         </mxCell>
-        <mxCell id="assembly-controller-client-shc" edge="1" parent="sok-boundary" source="controllerclient-enterprise-socket" style="edgeStyle=none;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=0;exitY=0.5;entryX=0.002;entryY=0.846;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="itsi-shc-coordinator" value="">
+        <mxCell id="assembly-controller-client-shc" edge="1" parent="sok-boundary" source="controllerclient-enterprise-socket" style="edgeStyle=none;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0.002;entryY=0.846;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="itsi-shc-coordinator" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="75" y="220" />
+              <mxPoint x="150" y="220" />
               <mxPoint x="1950" y="220" />
               <mxPoint x="1950" y="2061" />
             </Array>
@@ -313,17 +307,44 @@
         <mxCell id="controllerclient-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#34495E;" value="«interface» &lt;b&gt;splcommon.ControllerClient&lt;/b&gt;&lt;br&gt;provided by crState • required by Reconciler and SHC ITSI" vertex="1">
           <mxGeometry height="45" width="430" x="20" y="585" as="geometry" />
         </mxCell>
-        <mxCell id="dep-af-repository-manager" edge="1" parent="sok-boundary" source="generic-app-framework" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#0B5345;labelBackgroundColor=#F3FBF9;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.76;entryX=1;entryY=0.5;" target="remote-storage-adapter" value="«use» RemoteDataClientManager">
+        <mxCell id="remote-download-interface" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;inset=3;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="930" y="1398" as="geometry" />
+        </mxCell>
+        <mxCell id="remote-download-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#0B7A75;strokeColor=none;connectable=0;" value="" vertex="1">
+          <mxGeometry height="2" width="20" x="910" y="1414" as="geometry" />
+        </mxCell>
+        <mxCell id="remote-download-interface-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=9;fontColor=#0B5345;" value="«design interface»&lt;br&gt;&lt;b&gt;RemoteDataClientManager.&lt;br&gt;DownloadApp&lt;/b&gt;" vertex="1">
+          <mxGeometry height="58" width="126" x="918" y="1438" as="geometry" />
+        </mxCell>
+        <mxCell id="dep-af-repository-manager" edge="1" parent="sok-boundary" source="generic-app-framework" style="edgeStyle=none;rounded=0;orthogonalLoop=0;html=1;strokeColor=#0B7A75;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=0;exitY=0.76;entryX=1;entryY=0.5;" target="remote-download-interface" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-reconciler-validation" edge="1" parent="sok-boundary" source="enterprise-reconcilers" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#F3FBF9;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;" target="app-framework-validation" value="«use» validate App Framework">
+        <mxCell id="app-framework-validation-interface" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;flipH=1;rotation=90;inset=3;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="513" y="646" as="geometry" />
+        </mxCell>
+        <mxCell id="app-framework-validation-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#0B7A75;strokeColor=none;connectable=0;" value="" vertex="1">
+          <mxGeometry height="20" width="2" x="529" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="app-framework-validation-interface-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=10;fontColor=#0B5345;" value="«design interface»&lt;br&gt;&lt;b&gt;ValidateAppFrameworkSpec&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="330" x="550" y="604" as="geometry" />
+        </mxCell>
+        <mxCell id="dep-reconciler-validation" edge="1" parent="sok-boundary" source="enterprise-reconcilers" style="edgeStyle=none;rounded=0;orthogonalLoop=0;html=1;strokeColor=#0B7A75;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="app-framework-validation-interface" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-reconciler-af" edge="1" parent="sok-boundary" source="enterprise-reconcilers" style="edgeStyle=none;curved=0;orthogonalLoop=0;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#0B5345;labelBackgroundColor=#F3FBF9;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" target="generic-app-framework" value="«use» start App Framework">
+        <mxCell id="app-framework-entry-interface" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;flipH=1;inset=3;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="996" y="1201" as="geometry" />
+        </mxCell>
+        <mxCell id="app-framework-entry-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#0B7A75;strokeColor=none;connectable=0;" value="" vertex="1">
+          <mxGeometry height="2" width="20" x="1030" y="1217" as="geometry" />
+        </mxCell>
+        <mxCell id="app-framework-entry-interface-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=10;fontColor=#0B5345;" value="«design interface»&lt;br&gt;&lt;b&gt;afwSchedulerEntry&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="825" y="1135" as="geometry" />
+        </mxCell>
+        <mxCell id="dep-reconciler-af" edge="1" parent="sok-boundary" source="enterprise-reconcilers" style="edgeStyle=none;curved=0;orthogonalLoop=0;rounded=0;html=1;strokeColor=#0B7A75;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="app-framework-entry-interface" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="980" y="430" />
-              <mxPoint x="980" y="1220" />
+              <mxPoint x="980" y="1218" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -336,30 +357,42 @@
         <mxCell id="assembly-af-itsi-shc" edge="1" parent="sok-boundary" source="generic-app-framework" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=1;exitY=0.9;entryX=0;entryY=0.5;" target="itsi-shc-interface-socket" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-af-state" edge="1" parent="sok-boundary" source="generic-app-framework" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#F3FBF9;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.46;entryX=1;entryY=0.13;" target="remote-storage-adapter" value="«use» state helpers">
+        <mxCell id="bundle-state-interface" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;inset=3;fillColor=#F3FBF9;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="930" y="1283" as="geometry" />
+        </mxCell>
+        <mxCell id="bundle-state-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#C25700;strokeColor=none;connectable=0;" value="" vertex="1">
+          <mxGeometry height="2" width="20" x="910" y="1299" as="geometry" />
+        </mxCell>
+        <mxCell id="bundle-state-interface-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=9;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;setBundlePushState&lt;/b&gt;" vertex="1">
+          <mxGeometry height="48" width="126" x="918" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="dep-af-state" edge="1" parent="sok-boundary" source="generic-app-framework" style="edgeStyle=none;rounded=0;orthogonalLoop=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=0;exitY=0.46;entryX=1;entryY=0.5;" target="bundle-state-interface" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-itsi-state" edge="1" parent="sok-boundary" source="itsi-shc-coordinator" style="edgeStyle=none;curved=0;orthogonalLoop=0;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#F3FBF9;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.7;entryX=1;entryY=0.85;" target="remote-storage-adapter" value="«use» ITSI checkpoints">
+        <mxCell id="itsi-checkpoint-interface" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;sketch=0;inset=3;fillColor=#F3FBF9;strokeColor=#C25700;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="34" width="34" x="930" y="1507" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-checkpoint-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#C25700;strokeColor=none;connectable=0;" value="" vertex="1">
+          <mxGeometry height="2" width="20" x="910" y="1523" as="geometry" />
+        </mxCell>
+        <mxCell id="itsi-checkpoint-interface-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=10;fontColor=#873600;" value="«design interface»&lt;br&gt;&lt;b&gt;setItsiClusterAppsPostInstallInProgress&lt;/b&gt;" vertex="1">
+          <mxGeometry height="44" width="360" x="990" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="dep-itsi-state" edge="1" parent="sok-boundary" source="itsi-shc-coordinator" style="edgeStyle=none;curved=0;orthogonalLoop=0;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=0;exitY=0.7;entryX=1;entryY=0.5;" target="itsi-checkpoint-interface" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2000" y="2011" />
-              <mxPoint x="2000" y="2250" />
-              <mxPoint x="950" y="2250" />
-              <mxPoint x="950" y="1525" />
+              <mxPoint x="2000" y="1580" />
+              <mxPoint x="984" y="1580" />
+              <mxPoint x="984" y="1524" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="podexec-interface-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#0B5345;" value="«interface» &lt;b&gt;splutil.PodExecClientImpl&lt;/b&gt;&lt;br&gt;provided by Pod Execution Client • sockets top→bottom: Scheduler, C3, Standalone, SHC" vertex="1">
+        <mxCell id="podexec-interface-label" parent="sok-boundary" style="text;html=1;strokeColor=none;fillColor=#F3FBF9;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Helvetica;fontSize=11;fontColor=#0B5345;" value="«interface» &lt;b&gt;splutil.PodExecClientImpl&lt;/b&gt;&lt;br&gt;provided by Pod Execution Client • each repeated native interface is named &lt;b&gt;RunPodExecCommand&lt;/b&gt; • consumers top→bottom: Scheduler, C3, Standalone, SHC" vertex="1">
           <mxGeometry height="62" width="520" x="3660" y="1035" as="geometry" />
         </mxCell>
-        <mxCell id="podexec-af-socket" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="3583" y="1143" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-af-mask" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#F3FBF9;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="3600" y="1140" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-af-ball" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="3616" y="1148" as="geometry" />
+        <mxCell id="podexec-af-socket" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;flipH=1;inset=3;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=9;fontColor=#0B5345;labelBackgroundColor=#F3FBF9;" value="&lt;b&gt;RunPodExecCommand&lt;/b&gt;" vertex="1">
+          <mxGeometry height="34" width="34" x="3606" y="1143" as="geometry" />
         </mxCell>
         <mxCell id="podexec-af-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#0B7A75;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="3640" y="1159" as="geometry" />
@@ -374,14 +407,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="podexec-c3-socket" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="3583" y="1223" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-c3-mask" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#F3FBF9;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="3600" y="1220" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-c3-ball" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="3616" y="1228" as="geometry" />
+        <mxCell id="podexec-c3-socket" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;flipH=1;inset=3;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=9;fontColor=#0B5345;labelBackgroundColor=#F3FBF9;" value="&lt;b&gt;RunPodExecCommand&lt;/b&gt;" vertex="1">
+          <mxGeometry height="34" width="34" x="3606" y="1223" as="geometry" />
         </mxCell>
         <mxCell id="podexec-c3-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#0B7A75;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="3640" y="1239" as="geometry" />
@@ -389,14 +416,8 @@
         <mxCell id="assembly-c3-podexec" edge="1" parent="sok-boundary" source="itsi-c3-stager" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="podexec-c3-socket" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="podexec-standalone-socket" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="3583" y="1313" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-standalone-mask" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#F3FBF9;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="3600" y="1310" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-standalone-ball" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="3616" y="1318" as="geometry" />
+        <mxCell id="podexec-standalone-socket" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;flipH=1;inset=3;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=9;fontColor=#0B5345;labelBackgroundColor=#F3FBF9;" value="&lt;b&gt;RunPodExecCommand&lt;/b&gt;" vertex="1">
+          <mxGeometry height="34" width="34" x="3606" y="1313" as="geometry" />
         </mxCell>
         <mxCell id="podexec-standalone-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#0B7A75;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="3640" y="1329" as="geometry" />
@@ -404,14 +425,8 @@
         <mxCell id="assembly-standalone-podexec" edge="1" parent="sok-boundary" source="itsi-standalone-installer" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="podexec-standalone-socket" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="podexec-shc-socket" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="34" width="34" x="3583" y="1403" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-shc-mask" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#F3FBF9;strokeColor=none;" value="" vertex="1">
-          <mxGeometry height="40" width="22" x="3600" y="1400" as="geometry" />
-        </mxCell>
-        <mxCell id="podexec-shc-ball" parent="sok-boundary" style="ellipse;html=1;aspect=fixed;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="24" width="24" x="3616" y="1408" as="geometry" />
+        <mxCell id="podexec-shc-socket" parent="sok-boundary" style="shape=providedRequiredInterface;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;flipH=1;inset=3;fillColor=#F3FBF9;strokeColor=#0B7A75;strokeWidth=2;fontFamily=Helvetica;fontSize=9;fontColor=#0B5345;labelBackgroundColor=#F3FBF9;" value="&lt;b&gt;RunPodExecCommand&lt;/b&gt;" vertex="1">
+          <mxGeometry height="34" width="34" x="3606" y="1403" as="geometry" />
         </mxCell>
         <mxCell id="podexec-shc-provider-stem" connectable="0" parent="sok-boundary" style="shape=rectangle;html=1;fillColor=#0B7A75;strokeColor=none;connectable=0;" value="" vertex="1">
           <mxGeometry height="2" width="20" x="3640" y="1419" as="geometry" />
@@ -419,41 +434,56 @@
         <mxCell id="assembly-shc-podexec" edge="1" parent="sok-boundary" source="itsi-shc-coordinator" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2.5;endArrow=none;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="podexec-shc-socket" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-kubernetes-api" edge="1" parent="1" source="port-kubernetes" style="edgeStyle=none;rounded=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=none;endFill=0;startArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.5;startFill=1;" target="kubernetes-api" value="«use» Watch + status / HTTPS">
+        <mxCell id="dep-kubernetes-api" edge="1" parent="1" source="port-kubernetes" style="edgeStyle=none;rounded=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="kubernetes-api" value="«use» Watch + status / HTTPS">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-repository-s3" edge="1" parent="1" source="remote-storage-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="app-repository" value="«use» Fetch apps / HTTPS">
+        <mxCell id="delegation-repository-port" edge="1" parent="sok-boundary" source="remote-storage-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;endArrow=none;startArrow=none;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="port-repository" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dep-podexec-standalone-runtime" edge="1" parent="1" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" target="standalone-runtime" value="«use» pods/exec • Install apps">
+        <mxCell id="dep-repository-s3" edge="1" parent="1" source="port-repository" style="edgeStyle=none;rounded=0;html=1;strokeColor=#7F8C8D;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#34495E;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="app-repository" value="«use» Fetch apps / HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="delegation-podexec-standalone-port" edge="1" parent="sok-boundary" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" target="port-standalone" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="5360" y="960" />
+              <mxPoint x="4370" y="630" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dep-podexec-cm-runtime" edge="1" parent="1" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.4;entryX=0;entryY=0.5;" target="cluster-manager-runtime" value="«use» pods/exec • Stage index app">
+        <mxCell id="dep-podexec-standalone-runtime" edge="1" parent="1" source="port-standalone" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="standalone-runtime" value="«use» pods/exec • Install apps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="delegation-podexec-cm-port" edge="1" parent="sok-boundary" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.4;entryX=0;entryY=0.5;" target="port-cm" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="5360" y="1650" />
+              <mxPoint x="4370" y="1320" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dep-podexec-deployer-runtime" edge="1" parent="1" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.6;entryX=0;entryY=0.5;" target="shc-deployer-runtime" value="«use» pods/exec • Stage search apps">
+        <mxCell id="dep-podexec-cm-runtime" edge="1" parent="1" source="port-cm" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="cluster-manager-runtime" value="«use» pods/exec • Stage index app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="delegation-podexec-deployer-port" edge="1" parent="sok-boundary" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.6;entryX=0;entryY=0.5;" target="port-deployer" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="5360" y="2100" />
+              <mxPoint x="4370" y="1770" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dep-podexec-shc-runtime" edge="1" parent="1" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" target="search-head-runtime" value="«use» pods/exec • ITSI setup / REST">
+        <mxCell id="dep-podexec-deployer-runtime" edge="1" parent="1" source="port-deployer" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="shc-deployer-runtime" value="«use» pods/exec • Stage search apps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="delegation-podexec-shc-port" edge="1" parent="sok-boundary" source="pod-exec-adapter" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;endArrow=none;startArrow=none;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" target="port-shc" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="5360" y="2710" />
+              <mxPoint x="4370" y="2380" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4F6F7;strokeColor=#7F8C8D;strokeWidth=2;align=left;verticalAlign=middle;spacing=18;fontFamily=Helvetica;fontSize=13;fontColor=#34495E;shadow=0;" value="&lt;b&gt;Viewpoint&lt;/b&gt;  decomposition of one deployment box: Splunk Operator (SOK)  ·  square on boundary = facade port traced from deployment communication&lt;br&gt;&lt;b&gt;UML notation&lt;/b&gt;  short-stem ball = provided interface  ·  socket + assembly line = required interface  ·  dashed open arrow = «use» dependency (client → supplier)  ·  no bare component joins are used&lt;br&gt;&lt;b&gt;Theme&lt;/b&gt;  Teal = existing SOK/Splunk  ·  Teal + orange outline = existing component changed for ITSI  ·  Orange = new ITSI logic  ·  Gray = external/stock&lt;br&gt;&lt;b&gt;Scope&lt;/b&gt;  PodExecClientImpl and ControllerClient are implementation interfaces. Repeated PodExec lollipops show one provided contract once per consumer route. ITSI entry lollipops are design interfaces mapped one-to-one to current call seams on branch feature/itsi-app-framework-s1-c3-minimal. Helper calls remain «use» dependencies. License handling, Java, upgrade, build pipeline and downstream propagation are outside this view." vertex="1">
+        <mxCell id="dep-podexec-shc-runtime" edge="1" parent="1" source="port-shc" style="edgeStyle=none;rounded=0;html=1;strokeColor=#C25700;strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#873600;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="search-head-runtime" value="«use» pods/exec • ITSI setup / REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4F6F7;strokeColor=#7F8C8D;strokeWidth=2;align=left;verticalAlign=middle;spacing=18;fontFamily=Helvetica;fontSize=13;fontColor=#34495E;shadow=0;" value="&lt;b&gt;Viewpoint&lt;/b&gt;  decomposition of one deployment box: Splunk Operator (SOK)  ·  square on boundary = facade port traced from deployment communication&lt;br&gt;&lt;b&gt;UML notation&lt;/b&gt;  every subcomponent relationship uses a named native Provided/Required Interface assembly  ·  solid arrowless component-to-port line = delegation  ·  dashed open arrow = external «use» dependency only (client → supplier)  ·  no bare component joins are used&lt;br&gt;&lt;b&gt;Theme&lt;/b&gt;  Teal = existing SOK/Splunk  ·  Teal + orange outline = existing component changed for ITSI  ·  Orange = new ITSI logic  ·  Gray = external/stock&lt;br&gt;&lt;b&gt;Scope&lt;/b&gt;  PodExecClientImpl and ControllerClient are implementation interfaces. Every repeated PodExec interface is labeled RunPodExecCommand. ITSI entry interfaces map one-to-one to the exact code methods shown beside them on branch feature/itsi-app-framework-s1-c3-minimal. Internal method assemblies use exact callable names; «use» is reserved for external systems. License handling, Java, upgrade, build pipeline and downstream propagation are outside this view." vertex="1">
           <mxGeometry height="190" width="4380" x="980" y="3450" as="geometry" />
         </mxCell>
       </root>
